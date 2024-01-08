@@ -3,7 +3,6 @@ import "./registerScreen.css";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import Container from "../../Components/Container/container";
-import coverImage from '../../assets/logo.png';
 
 const RegisterScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,12 +17,11 @@ const RegisterScreen = () => {
   };
 
   return (
-    <div className="RegisterScreen">
-      <div className="loginScreen">
-        <Container>
-          <p className="nameLogo">My Center</p>
+    <div className="registerScreen">
+      <Container>
+        <div className="registerPart">
+          <p className="logoName">My Center</p>
           <p className="title">
-            {" "}
             Sign up to see all the discounts and new offers
           </p>
           <div className="form">
@@ -42,23 +40,18 @@ const RegisterScreen = () => {
                 </button>
               )}
             </div>
-            <button className="signUp">Sign up</button>
+            <button>Sign up</button>
           </div>
-        </Container>
-      </div>
-
-      <div className="login">
-        <p>
-          Have an account ?{" "}
-          <a href="/">
-            <span>Log in</span>
-          </a>{" "}
-        </p>
-      </div>
-      <div className="logo">
-        <img src={coverImage}></img>
-        
-      </div>
+        </div>
+        <div className="loginPart">
+          <p>
+            Have an account ?
+            <a href="/">
+              <span> Log in</span>
+            </a>
+          </p>
+        </div>
+      </Container>
     </div>
   );
 };
