@@ -1,0 +1,104 @@
+.RegisterScreen {
+}
+.loginScreen {
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin-top: 80px;
+  margin-left: 200px;
+}
+.loginScreen .nameLogo {
+  text-align: center;
+  font-family: "Pacifico";
+  font-size: 38px;
+  margin-bottom: 24px;
+  color: rgb(233, 201, 23);
+}
+.loginScreen .title {
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 24px;
+  margin-left: 50px;
+}
+
+.loginScreen .form input {
+  display: block;
+  padding: 0 16px;
+  height: 48px;
+  border: none;
+  border: 1px solid #eee;
+  outline-color: red;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  width: 300px;
+  font-size: 16px;
+  background-color: #f3f3f3;
+}
+
+.loginScreen .form .signUp {
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 18px;
+  width: 100%;
+  transition: 0.3s;
+  font-weight: bold;
+  background-color: #0000ff;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 16px;
+}
+.loginScreen .form .signUp:hover {
+  background-color: #080d70bd;
+}
+.loginScreen .form .signUp:active {
+  opacity: 0.4;
+}
+
+.loginScreen .form .password .showPass {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  margin-top: -55px;
+  margin-left: 300px;
+}
+.loginScreen .form .password .showPass:hover {
+  background-color: #eee;
+  border-radius: 100%;
+}
+
+.login {
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 400px;
+  margin-top: 12px;
+  margin-left: 200px;
+  font-size: 18px;
+}
+.login a {
+  text-decoration: none;
+}
+.login span {
+  color: #0000ffd3;
+}
+
+.logo img {
+  width: 600px;
+  height: 600px;
+  margin-top: -600px;
+  margin-left: -300px;
+
+}
