@@ -1,0 +1,16 @@
+.content-categ {
+  margin-top: 18px;
+}
+.content-categ ul {
+  list-style: none;
+}
+
+.content-categ .contentIn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  color: #000;
+  margin-bottom: 28px;
+  font-size: 22px;
+}

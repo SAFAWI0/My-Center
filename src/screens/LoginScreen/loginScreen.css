@@ -1,0 +1,106 @@
+.loginScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.loginScreen .loginPart {
+  border: 1px solid #eee;
+  width: 400px;
+}
+.loginScreen .loginPart .logoName {
+  text-align: center;
+  font-family: "Pacifico";
+  font-size: 38px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.loginScreen .loginPart .form input {
+  display: block;
+  padding: 0 16px;
+  height: 48px;
+  border: none;
+  border: 1px solid #eee;
+  outline-color: #000;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 300px;
+  font-size: 16px;
+  background-color: #f3f3f3;
+  margin-left: 30px;
+}
+.loginScreen .loginPart .form button {
+  border: none;
+  height: 50px;
+  width: 340px;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #0000ff;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  margin-left: 27px;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+.loginScreen .loginPart .form button:hover {
+  background-color: #000aaa;
+}
+.loginScreen .loginPart .form button:active {
+  opacity: 0.4;
+}
+.loginScreen .loginPart .form .password .showPass {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #000;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  margin-top: -45px;
+  margin-left: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginScreen .loginPart .form.password .showPass:hover {
+  background-color: #c9c3c3;
+  border-radius: 100%;
+}
+
+.loginScreen .registerPart {
+  border: 1px solid #eee;
+  margin-top: 10px;
+  height: 80px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginScreen .registerPart a {
+  text-decoration: none;
+}
+.loginScreen .registerPart span {
+  color: #0000ffd3;
+}
+
+@media screen and (max-width: 360px) {
+  .loginScreen .loginPart {
+    border: none;
+  }
+  .loginScreen .loginPart {
+    border: none;
+    margin-left: 24px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .loginScreen .loginPart {
+    border: none;
+  }
+  .loginScreen .registerPart {
+    border: none;
+    margin-right: 10px;
+  }
+}

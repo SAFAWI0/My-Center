@@ -21,7 +21,7 @@
   font-size: 18px;
   width: 250px;
   text-align: center;
-  margin-left: 80px;
+  margin-left: 70px;
   margin-bottom: 20px;
 }
 .registerScreen .registerPart .form input {
@@ -32,7 +32,7 @@
   border: 1px solid #eee;
   outline-color: red;
   border-radius: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   width: 300px;
   font-size: 16px;
   background-color: #f3f3f3;
@@ -50,8 +50,9 @@
   cursor: pointer;
   outline: none;
   transition: 0.3s;
-  margin-left: 30px;
+  margin-left: 27px;
   margin-bottom: 16px;
+  margin-top: 24PX;
 }
 .registerScreen .registerPart .form button:hover {
   background-color: #000aaa;

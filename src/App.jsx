@@ -1,15 +1,10 @@
 import "./App.css";
-import Container from "./Components/Container/container";
-import RegisterScreen from "./screens/RegisterScreen/registerScreen";
+import Header from "./Components/Header/header";
 
 function App() {
   return (
     <div>
-     
-      <Container>
-       <RegisterScreen/>
-      </Container>
-    
+      <Header/>
     </div>
   );
 }
