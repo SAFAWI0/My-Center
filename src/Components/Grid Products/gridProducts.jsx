@@ -20,7 +20,6 @@ export const GridProducts = () => {
           </div>
         </div>
       </div>
-
       <div className="grid">
         <div className="grid-list-products">
           <div className="grid-imag-product">
