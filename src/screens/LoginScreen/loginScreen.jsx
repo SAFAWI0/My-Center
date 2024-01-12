@@ -38,7 +38,7 @@ const LoginScreen = () => {
         <div className="registerPart">
           <p>
             Don't have an account?
-            <a href="/">
+            <a href="Register">
               <span> Sign up</span>
             </a>
           </p>

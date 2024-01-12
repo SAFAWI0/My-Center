@@ -1,75 +1,62 @@
-import "./categories.css";
-import { Drawer } from "antd";
-import { useAppStore } from "../../store";
-
-export const Categories = () => {
-  const { isOpen, setOpen } = useAppStore();
-
-  const onClose = () => {
-    setOpen(false);
-  };
-
-  return (
-    <div>
-      <Drawer
-        title="Categories"
-        placement="right"
-        open={isOpen}
-        onClose={onClose}
-      >
-        <div className="content-categ">
-          <ul>
-            <li>
-              <a href="">عيادة الجراحة التجميلية</a>
-            </li>
-            <li>
-              <a href="">عيادة الجلدية والتجميل</a>
-            </li>
-            <li>
-              <a href="">عيادة طب الاسنان</a>
-            </li>
-            <li>
-              <a href="">زراعة الشعر</a>
-            </li>
-            <li>
-              <a href="">صالون</a>
-            </li>
-            <li>
-              <a href=""> تداخلات التجميل</a>
-            </li>
-          </ul>
+<div className="list-products">
+          <Link>
+            <GoArrowLeft />
+            المزيد
+          </Link>
+          <span>
+            <AiFillLike />
+            مراكز ينصح بها
+          </span>
         </div>
-      </Drawer>
-    </div>
-  );
-};
+
+        <div className="content-products">
+          <img className="backgrond" src="https://picsum.photos/907/902" />
+          <img className="logo" src="https://picsum.photos/904/902" />
+          <span><b>Beauty</b></span>
+          <span>center is good</span>
+          <p><FaStar style={{color:"gold",marginRight:"6px",fontSize:"18px"}} />4.5 </p>
+        </div>
 
 
-
-
-
-.content-categ {
-  text-align: center;
-  font-size: 22px;
-}
-.content-categ ul {
-  list-style: none;
-}
-
-.content-categ li {
-  margin-bottom: 20px;
-}
-
-.content-categ a {
-  color: #007bff;
+        .list-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
-  display: block;
-  border: 1px solid #eee;
-  background-color: #ccc;
-  padding: 12px;
+}
+.list-title span {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  gap: 10px;
+}
+.content-products {
+  margin-top: 20px;
 }
 
-.content-categ a:hover {
-background-color: #eee;
-color: #000;
+.content-products .backgrond {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+.content-products .logo {
+  width: 50;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: -50px;
+}
+
+.content-products span {
+  display: block;
+  padding: 10px;
+text-align: end;
+
+}
+
+.content-products p {
+  margin: 10px;
+ 
+  text-align: end;
 }

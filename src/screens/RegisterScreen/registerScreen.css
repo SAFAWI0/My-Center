@@ -67,7 +67,7 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  margin-top: -55px;
+  margin-top: -50px;
   margin-left: 330px;
   display: flex;
   justify-content: center;
@@ -93,7 +93,7 @@
 .registerScreen .loginPart span {
   color: #0000ffd3;
 }
-
+/* 
 @media screen and (max-width: 360px) {
   .registerScreen .loginPart {
     border: none;
@@ -110,4 +110,4 @@
   .registerScreen .registerPart {
     border: none;
   }
-}
+} */

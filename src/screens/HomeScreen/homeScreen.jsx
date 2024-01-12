@@ -1,7 +1,11 @@
-import "./homeScreen.css";
+import Header from "../../Components/Header/header";
+import { Products } from "../../Components/Products/products";
 
-const HomeScreen = () => {
-  return <div></div>;
+export const HomeScreen = () => {
+  return (
+    <div>
+      <Header />
+      <Products />
+    </div>
+  );
 };
-
-export default HomeScreen;

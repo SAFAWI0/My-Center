@@ -4,6 +4,7 @@ import { RiHome2Line } from "react-icons/ri";
 import { CgFormatJustify } from "react-icons/cg";
 import { ViewBox } from "../ViewBox/viewBox";
 import { useAppStore } from "../../store";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { setOpen } = useAppStore();
@@ -16,9 +17,9 @@ const Header = () => {
     <div className="header">
       <Container>
         <div className="content">
-          <a href="/">
+          <Link href="/">
             <RiHome2Line />
-          </a>
+          </Link>
           <div className="logo">
             <h2>My Center</h2>
           </div>

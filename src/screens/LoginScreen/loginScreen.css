@@ -86,7 +86,7 @@
   color: #0000ffd3;
 }
 
-@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 360px) {
   .loginScreen .loginPart {
     border: none;
   }
@@ -103,4 +103,4 @@
     border: none;
     margin-right: 10px;
   }
-}
+} */
