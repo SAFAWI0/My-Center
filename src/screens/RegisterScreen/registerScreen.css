@@ -24,9 +24,10 @@
   margin-left: 70px;
   margin-bottom: 20px;
 }
+
 .registerScreen .registerPart .form input {
   display: block;
-  padding: 0 16px;
+  padding: 0 18px;
   height: 48px;
   border: none;
   border: 1px solid #eee;
@@ -36,7 +37,7 @@
   width: 300px;
   font-size: 16px;
   background-color: #f3f3f3;
-  margin-left: 30px;
+  margin-left: 28px;
 }
 .registerScreen .registerPart .form button {
   border: none;
@@ -50,9 +51,9 @@
   cursor: pointer;
   outline: none;
   transition: 0.3s;
-  margin-left: 27px;
+  margin-left: 28px;
   margin-bottom: 16px;
-  margin-top: 24PX;
+  margin-top: 24px;
 }
 .registerScreen .registerPart .form button:hover {
   background-color: #000aaa;
@@ -93,16 +94,17 @@
 .registerScreen .loginPart span {
   color: #0000ffd3;
 }
-/* 
+
 @media screen and (max-width: 360px) {
   .registerScreen .loginPart {
     border: none;
   }
   .registerScreen .registerPart {
     border: none;
-    margin-left: 24px;
+    width: 100%;
   }
 }
+
 @media screen and (max-width: 430px) {
   .registerScreen .loginPart {
     border: none;
@@ -110,4 +112,4 @@
   .registerScreen .registerPart {
     border: none;
   }
-} */
+}
