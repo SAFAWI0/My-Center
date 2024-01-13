@@ -24,11 +24,22 @@
   margin-bottom: 8px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.grid ul {
+  display: flex;
+  list-style-type: none;
+  overflow-y: auto;
+  position: relative;
   gap: 10px;
 }
+
+.grid ul::-webkit-scrollbar {
+  display: none;
+}
+.grid ul li {
+  flex: 0 0 calc(40% - 5px);
+  max-width: calc(40% - 5px);
+}
+
 .grid-list-products .grid-imag-product .backgrond {
   width: 100%;
   height: 200px;
