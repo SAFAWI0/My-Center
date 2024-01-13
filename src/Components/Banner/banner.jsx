@@ -16,7 +16,6 @@ const BannerSlider = () => {
   };
 
   return (
-    <Container>
       <div className="app-banner">
         <Slider {...settings}>
           {images.map((image, index) => (
@@ -26,7 +25,6 @@ const BannerSlider = () => {
           ))}
         </Slider>
       </div>
-    </Container>
   );
 };
 
