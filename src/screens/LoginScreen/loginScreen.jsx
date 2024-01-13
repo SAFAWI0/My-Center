@@ -19,7 +19,7 @@ const LoginScreen = () => {
         <div className="loginPart">
           <p className="logoName">My Center</p>
           <div className="form">
-            <input placeholder="Email" />
+            <input placeholder="Email or Full Name" />
             <div className="password">
               <input
                 placeholder="Password"
