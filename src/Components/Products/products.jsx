@@ -8,6 +8,7 @@ import { AiFillLike } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
 import { SlActionUndo } from "react-icons/sl";
 import { GridProducts } from "../Grid Products/gridProducts";
+import { products } from "../../fake";
 
 export const Products = () => {
   return (
@@ -27,7 +28,7 @@ export const Products = () => {
           />
         </div>
         <BannerSlider />
-
+        <GridProducts />
         <div className="list-products">
           <div className="view-more">
             <div className="content">
@@ -43,23 +44,27 @@ export const Products = () => {
               </div>
             </div>
           </div>
-          <div className="imag-product">
-            <img className="backgrond" src="https://picsum.photos/907/902" />
-            <img className="logo" src="https://picsum.photos/904/902" />
-          </div>
-          <div className="title-product">
-            <span>Beauty</span>
-            <p className="evaluation">
-              center is good
-              <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
-            </p>
-            <p className="evaluation">
-              <FaStar style={{ color: "gold" }} />
-              4.5
-            </p>
-          </div>
+          {products.map((el, i) => (
+            <div key={i} style={{ marginBottom: "10px" }}>
+              <div className="imag-product">
+                <img className="backgrond" src={el.background} />
+                <img className="logo" src={el.logo} />
+              </div>
+
+              <div className="title-product">
+                <span>{el.name}</span>
+                <p className="evaluation">
+                  {el.description}
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  {el.evaluation}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-        <GridProducts />
       </Container>
     </div>
   );
