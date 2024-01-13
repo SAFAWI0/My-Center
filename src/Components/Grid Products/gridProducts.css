@@ -30,6 +30,7 @@
   overflow-y: auto;
   position: relative;
   gap: 10px;
+  flex-direction: row-reverse;
 }
 
 .grid ul::-webkit-scrollbar {
@@ -64,3 +65,30 @@
   align-items: center;
   gap: 6px;
 }
+
+
+
+@media screen and (max-width: 360px) {
+.grid-list-products .grid-title-product p {
+font-size: 12px;
+}
+.grid-list-products .grid-imag-product .backgrond {
+
+  height: 150px;
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 430px) {
+
+}
+
