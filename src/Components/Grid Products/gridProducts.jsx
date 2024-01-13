@@ -6,7 +6,7 @@ import { FaStar } from "react-icons/fa";
 
 export const GridProducts = () => {
   return (
-    <div>
+    <div style={{ marginBottom: "12px" }}>
       <div className="grid-more">
         <div className="grid-content">
           <Link>
@@ -20,40 +20,204 @@ export const GridProducts = () => {
           </div>
         </div>
       </div>
-      <div className="grid">
-        <div className="grid-list-products">
-          <div className="grid-imag-product">
-            <img className="backgrond" src="https://picsum.photos/907/908" />
-          </div>
-          <div className="grid-title-product">
-            <span>Beauty</span>
-            <p className="evaluation">
-              center is good
-              <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
-            </p>
-            <p className="evaluation">
-              <FaStar style={{ color: "gold" }} />
-              4.5
-            </p>
-          </div>
-        </div>
 
-        <div className="grid-list-products">
-          <div className="grid-imag-product">
-            <img className="backgrond" src="https://picsum.photos/907/908" />
-          </div>
-          <div className="grid-title-product">
-            <span>Beauty</span>
-            <p className="evaluation">
-              center is good
-              <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
-            </p>
-            <p className="evaluation">
-              <FaStar style={{ color: "gold" }} />
-              4.5
-            </p>
-          </div>
-        </div>
+      <div className="grid">
+        <ul>
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div className="grid-list-products">
+              <div className="grid-imag-product">
+                <img
+                  className="backgrond"
+                  src="https://picsum.photos/907/908"
+                />
+              </div>
+              <div className="grid-title-product">
+                <span>Beauty</span>
+                <p className="evaluation">
+                  center is good
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                </p>
+                <p className="evaluation">
+                  <FaStar style={{ color: "gold" }} />
+                  4.5
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   );
