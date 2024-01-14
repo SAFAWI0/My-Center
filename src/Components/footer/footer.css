@@ -1,0 +1,38 @@
+.footer {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+}
+.footer .content ul {
+  display: flex;
+  list-style-type: none;
+  gap: 25px;
+}
+.footer .content p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer .content ul li a {
+  color: #000;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 430px) {
+  .footer .content ul {
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer .content ul {
+    gap: 8px;
+  }
+  .footer .content p {
+    font-size: 16px;
+  }
+  .footer .content ul li a {
+    font-size: 20px;
+  }
+}
