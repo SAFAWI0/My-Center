@@ -39,7 +39,6 @@ export const products = [
     evaluation: 10,
     description: "center is good",
   },
-  
 ];
 export const images = [
   "https://picsum.photos/907/902",
@@ -47,3 +46,20 @@ export const images = [
   "https://picsum.photos/903/909",
 ];
 
+export const categories = [
+  {
+    name: "الجراحة التجميلية",
+  },
+  {
+    name: " الجلدية والتجميل",
+  },
+  {
+    name: " طب الاسنان",
+  },
+  {
+    name: " زراعة الشعر",
+  },
+  {
+    name: " تداخلات التجميل",
+  },
+];

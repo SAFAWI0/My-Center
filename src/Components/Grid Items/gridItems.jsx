@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import "./gridProducts.css";
+import "./gridItems.css";
 import { GoArrowLeft } from "react-icons/go";
 import { SlActionUndo } from "react-icons/sl";
 import { FaStar } from "react-icons/fa";
 import { products } from "../../fake";
 
-export const GridProducts = () => {
+export const GridItems = () => {
   return (
     <div style={{ marginBottom: "12px" }}>
       <div className="grid-more">
@@ -26,23 +26,25 @@ export const GridProducts = () => {
         <ul>
           {products.map((el, i) => (
             <li key={i}>
-              <div className="grid-list-products">
-                <div className="grid-imag-product">
-                  <img className="backgrond" src={el.background} />
-                </div>
-                <div className="grid-title-product">
-                  <span>{el.name}</span>
-                  <p className="evaluation">
-                    {el.description}
-                    <SlActionUndo
-                      style={{ color: "#666", marginRight: "6px" }}
-                    />
-                  </p>
-                  <p className="evaluation">
-                    <FaStar style={{ color: "gold" }} />
-                    {el.evaluation}
-                  </p>
-                </div>
+              <div className="grid-list-items">
+                <a href={`${el.id}`}>
+                  <div className="grid-imag-items">
+                    <img className="backgrond" src={el.background} />
+                  </div>
+                  <div className="grid-title-items">
+                    <span>{el.name}</span>
+                    <p className="evaluation">
+                      {el.description}
+                      <SlActionUndo
+                        style={{ color: "#666", marginRight: "6px" }}
+                      />
+                    </p>
+                    <p className="evaluation">
+                      <FaStar style={{ color: "gold" }} />
+                      {el.evaluation}
+                    </p>
+                  </div>
+                </a>
               </div>
             </li>
           ))}

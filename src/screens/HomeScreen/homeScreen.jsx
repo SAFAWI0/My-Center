@@ -1,11 +1,13 @@
 import Header from "../../Components/Header/header";
-import { Products } from "../../Components/Products/products";
+import { Items } from "../../Components/Items/Items";
+import { Footer } from "../../Components/footer/footer";
 
 export const HomeScreen = () => {
   return (
     <div>
       <Header />
-      <Products />
+      <Items />
+      <Footer />
     </div>
   );
 };

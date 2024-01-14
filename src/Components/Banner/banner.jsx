@@ -1,4 +1,3 @@
-import Container from "../Container/container";
 import "./banner.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,7 +11,7 @@ const BannerSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, // تفعيل التشغيل التلقائي
-    autoplaySpeed: 5000, // فترة التأخير بين الصور بالميللي ثانية (هنا 3 ثوانٍ)
+    autoplaySpeed: 5000, // فترة التأخير بين الصور بالميللي ثانية (هنا5 ثوانٍ)
   };
 
   return (
