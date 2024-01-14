@@ -1,62 +1,53 @@
-<div className="list-products">
-          <Link>
-            <GoArrowLeft />
-            المزيد
-          </Link>
-          <span>
-            <AiFillLike />
-            مراكز ينصح بها
-          </span>
+
+import "./page.css";
+import { useParams } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
+import Container from "../../Components/Container/container";
+
+export const Page = () => {
+  const { id } = useParams();
+
+  return (
+    <div>
+      <Container>
+        <div className="page-content">
+          <div className="image">
+            <img className="background" src="https://picsum.photos/900/800" />
+            <div className="content">
+              <h1>Beauty</h1>
+              <img className="logo" src="https://picsum.photos/900/900" />
+            </div>
+          </div>
+          <div className="evaluation">
+            <FaStar style={{ color: "gold" }} />
+            <p>
+              2.5
+              : تقييم المركز</p>
+          </div>
+            <span>center is good</span>
+          <p>:ايام الدوام</p>
         </div>
-
-        <div className="content-products">
-          <img className="backgrond" src="https://picsum.photos/907/902" />
-          <img className="logo" src="https://picsum.photos/904/902" />
-          <span><b>Beauty</b></span>
-          <span>center is good</span>
-          <p><FaStar style={{color:"gold",marginRight:"6px",fontSize:"18px"}} />4.5 </p>
-        </div>
+      </Container>
+    </div>
+  );
+};
 
 
-        .list-title a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.list-title span {
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  gap: 10px;
-}
-.content-products {
-  margin-top: 20px;
-}
-
-.content-products .backgrond {
+.page-content .image .background {
   width: 100%;
-  height: 200px;
+  height: 300px;
   border-radius: 8px;
 }
-.content-products .logo {
-  width: 50;
-  height: 50px;
+.page-content .image .content .logo {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   position: relative;
-  margin-top: -50px;
+  margin-top: -100px;
 }
-
-.content-products span {
-  display: block;
-  padding: 10px;
-text-align: end;
-
-}
-
-.content-products p {
-  margin: 10px;
- 
-  text-align: end;
+.page-content .evaluation{
+    margin-top: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
