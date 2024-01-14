@@ -1,6 +1,6 @@
 import "./page.css";
 import { useParams } from "react-router-dom";
-import Container from "../../Components/Container/container";
+import Container from "../Container/container";
 import { FaStar } from "react-icons/fa";
 
 export const Page = () => {
