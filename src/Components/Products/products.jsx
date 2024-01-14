@@ -32,7 +32,7 @@ export const Products = () => {
         <div className="list-products">
           <div className="view-more">
             <div className="content">
-              <Link>
+              <Link to="/Detiles" >
                 <GoArrowLeft /> <p>المزيد</p>
               </Link>
               <div className="description">
