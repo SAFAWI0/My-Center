@@ -46,7 +46,7 @@ export const images = [
   "https://picsum.photos/903/909",
 ];
 
-export const categories = [
+export const cate = [
   {
     name: "الجراحة التجميلية",
   },
