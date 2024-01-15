@@ -18,6 +18,9 @@
   color: #000;
   font-size: 24px;
 }
+.footer .content img {
+  width: 24px;
+}
 
 @media screen and (max-width: 430px) {
   .footer .content ul {
