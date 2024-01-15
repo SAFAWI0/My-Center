@@ -1,6 +1,10 @@
 import "./items.css";
 import Container from "../Container/container";
 import { SearchOutlined } from "@ant-design/icons";
+import BannerSlider from "../Banner/banner";
+import { Card } from "../Card/card";
+import { Categories } from "../Categories/categories";
+import { GridItems } from "../Grid Items/gridItems";
 
 export const Items = () => {
   return (
@@ -19,10 +23,10 @@ export const Items = () => {
             }}
           />
         </div>
- 
-        
-     
-       
+        <BannerSlider />
+        <Categories />
+        <GridItems />
+        <Card />
       </Container>
     </div>
   );
