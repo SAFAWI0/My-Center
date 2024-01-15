@@ -6,7 +6,6 @@ import { Card } from "../Card/card";
 import { Categories } from "../Categories/categories";
 import { GridItems } from "../GridItems/gridItems";
 
-
 export const Items = () => {
   return (
     <div>
