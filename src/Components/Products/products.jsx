@@ -1,10 +1,9 @@
-import React from "react";
 import "./products.css";
 import { SearchOutlined } from "@ant-design/icons";
 import Container from "../Container/container";
 import BannerSlider from "../Banner/banner";
 import { Card } from "../Card/card";
-import { Categories } from "../Categories/categories";
+
 export const Products = () => {
   return (
     <div>
@@ -23,7 +22,6 @@ export const Products = () => {
           />
         </div>
         <BannerSlider />
-        <Categories />
         <Card />
       </Container>
     </div>
