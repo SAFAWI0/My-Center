@@ -1,12 +1,12 @@
 import Header from "../../Components/Header/header";
-import { Items } from "../../Components/Items/Items";
+import {  Porduct } from "../../Components/porduct/porduct";
 import { Footer } from "../../Components/footer/footer";
 
 export const HomeScreen = () => {
   return (
     <div>
       <Header />
-      <Items />
+      <Porduct />
       <Footer />
     </div>
   );
