@@ -1,7 +1,6 @@
 import "./items.css";
 import Container from "../Container/container";
 import { SearchOutlined } from "@ant-design/icons";
-import BannerSlider from "../Banner/banner";
 
 export const Items = () => {
   return (
