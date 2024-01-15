@@ -20,7 +20,7 @@ export const Items = () => {
             }}
           />
         </div>
-        <BannerSlider />
+ 
         
      
        
