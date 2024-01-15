@@ -25,8 +25,11 @@ export const Items = () => {
           />
         </div>
         <BannerSlider />
+        
         <Categories />
         <GridItems />
+
+
         <Card />
       </Container>
     </div>
