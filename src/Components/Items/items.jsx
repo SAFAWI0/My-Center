@@ -4,7 +4,8 @@ import { SearchOutlined } from "@ant-design/icons";
 import BannerSlider from "../Banner/banner";
 import { Card } from "../Card/card";
 import { Categories } from "../Categories/categories";
-import { GridItems } from "../Grid Items/gridItems";
+import { GridItems } from "../GridItems/gridItems";
+
 
 export const Items = () => {
   return (
