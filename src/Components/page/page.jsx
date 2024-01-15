@@ -1,17 +1,19 @@
+
 import "./page.css";
 import { useParams } from "react-router-dom";
-import Container from "../../Components/Container/container";
 import { FaStar } from "react-icons/fa";
+import Container from "../../Components/Container/container";
 
 export const Page = () => {
   const { id } = useParams();
 
   return (
     <div>
+         <img className="background" src="https://picsum.photos/900/800" />
       <Container>
         <div className="page-content">
           <div className="image">
-            <img className="background" src="https://picsum.photos/900/800" />
+         
             <div className="content">
               <h1>Beauty</h1>
               <img className="logo" src="https://picsum.photos/900/900" />
