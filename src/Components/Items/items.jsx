@@ -27,6 +27,7 @@ export const Items = () => {
         <Categories />
         <GridItems />
         <Card />
+        
       </Container>
     </div>
   );
