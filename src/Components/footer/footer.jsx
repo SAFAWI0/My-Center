@@ -1,8 +1,8 @@
 import "./footer.css";
-import { FaXTwitter } from "react-icons/fa6";
 import Container from "../Container/container";
 import ima1 from "../../assets/facebook.png";
 import ima2 from "../../assets/instagram.png";
+import ima3 from "../../assets/X.png";
 import aon from "../../assets/Aon.png";
 
 export const Footer = () => {
@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="content">
           <div className="title">
             <p>By - Aon 2023 </p>
-            <img src={aon} alt="facebook"></img>
+            <img src={aon} alt="aon"></img>
           </div>
           <ul>
             <li>
@@ -32,7 +32,7 @@ export const Footer = () => {
             </li>
             <li>
               <a href={"https://twitter.com/EarthlinkTele"}>
-                <FaXTwitter />
+                <img src={ima3} alt="x" />
               </a>
             </li>
           </ul>
