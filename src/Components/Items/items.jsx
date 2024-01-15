@@ -26,7 +26,7 @@ export const Items = () => {
         <BannerSlider />
         <Categories />
         <GridItems />
-        <Card />
+       
       </Container>
     </div>
   );

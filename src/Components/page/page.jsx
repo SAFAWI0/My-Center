@@ -2,7 +2,7 @@
 import "./page.css";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import Container from "../../Components/Container/container";
+import Container from "../Container/container";
 
 export const Page = () => {
   const { id } = useParams();
