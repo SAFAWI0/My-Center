@@ -1,4 +1,4 @@
-import "./porduct.css";
+import "./porducts.css";
 import Container from "../Container/container";
 import { SearchOutlined } from "@ant-design/icons";
 import BannerSlider from "../Banner/banner";
@@ -6,7 +6,7 @@ import { Card } from "../Card/card";
 import { Categories } from "../Categories/categories";
 import { GridItems } from "../GridItems/gridItems";
 
-export const Porduct = () => {
+export const Porducts = () => {
   return (
     <div>
       <Container>
