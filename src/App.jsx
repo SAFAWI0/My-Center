@@ -7,7 +7,6 @@ import { HomeScreen } from "./screens/HomeScreen/homeScreen";
 
 
 
-
 function App() {
   return (
     <div>
