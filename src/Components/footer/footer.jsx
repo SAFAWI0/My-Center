@@ -1,6 +1,5 @@
 import "./footer.css";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaSquareInstagram } from "react-icons/fa6";
 import Container from "../Container/container";
 import ima1 from "../../assets/facebook.png";
 import ima2 from "../../assets/instagram.png";
