@@ -3,19 +3,19 @@ import { FaXTwitter } from "react-icons/fa6";
 import Container from "../Container/container";
 import ima1 from "../../assets/facebook.png";
 import ima2 from "../../assets/instagram.png";
+
 export const Footer = () => {
   return (
     <div className="footer">
       <Container>
         <div className="content">
-          <p>All Rights Reserved - Aon2023</p>
+          <p>All Rights Reserved - Aon 2023</p>
           <ul>
             <li>
               <a href={"https://www.facebook.com/earthlinktele/?locale=ar_AR"}>
                 <img src={ima1} alt="facebook"></img>
               </a>
             </li>
-
             <li>
               <a
                 href={
