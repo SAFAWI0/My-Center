@@ -1,4 +1,4 @@
-import React from 'react'
+import "./categories.css"
 import { cate } from '../../fake'
 
 export const Categories = () => {
