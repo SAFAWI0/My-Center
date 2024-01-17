@@ -5,6 +5,7 @@ import RegisterScreen from "./screens/RegisterScreen/registerScreen";
 import { HomeScreen } from "./screens/HomeScreen/homeScreen";
 import { Page } from "./page/page";
 
+
 function App() {
   return (
     <div>

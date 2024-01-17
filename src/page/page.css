@@ -18,6 +18,16 @@
   align-items: center;
 }
 
+.single-column-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.single-column-list li {
+  
+  padding: 10px;
+}
 @media screen and (max-width: 430px) {
   .page-content .image .background {
     height: 250px;
