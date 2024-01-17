@@ -25,6 +25,7 @@
 .footer .content ul li img {
   width: 24px;
 }
-.footer .content ul li {
+.footer .content ul li a {
   font-size: 24px;
+  color: #000;
 }
