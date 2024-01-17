@@ -2,7 +2,7 @@ import "./footer.css";
 import Container from "../Container/container";
 import imag1 from "../../assets/facebook.png";
 import imag2 from "../../assets/instagram.png";
-import imag3 from "../../assets/x.png";
+import { FaXTwitter } from "react-icons/fa6";
 export const Footer = () => {
   return (
     <div className="footer">
@@ -30,7 +30,7 @@ export const Footer = () => {
 
             <li>
               <a href={"https://twitter.com/EarthlinkTele"} />
-              <img src={imag3} alt="imageIcon" />
+              <FaXTwitter />
             </li>
           </ul>
         </div>
