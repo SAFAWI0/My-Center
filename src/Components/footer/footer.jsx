@@ -2,6 +2,7 @@ import "./footer.css";
 import Container from "../Container/container";
 import imag1 from "../../assets/facebook.png";
 import imag2 from "../../assets/instagram.png";
+import imag3 from "../../assets/aon.png";
 import { FaXTwitter } from "react-icons/fa6";
 export const Footer = () => {
   return (
@@ -10,13 +11,13 @@ export const Footer = () => {
         <div className="content">
           <div className="title">
             <p>By - Aon 2023 </p>
+            <img src={imag3} alt="imageIcon" />
           </div>
           <ul>
             <li>
-              <a
-                href={"https://www.facebook.com/earthlinktele/?locale=ar_AR"}
-              />
-              <img src={imag1} alt="imageIcon" />
+              <a href="https://www.facebook.com/earthlinktele/?locale=ar_AR">
+                <img src={imag1} alt="imageIcon" />
+              </a>
             </li>
 
             <li>
