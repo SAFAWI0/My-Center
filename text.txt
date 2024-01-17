@@ -91,3 +91,36 @@ export const Footer = () => {
     font-size: 20px;
   }
 }
+
+
+
+
+  
+.category-item {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 4px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border-radius: 18px;
+}
+.category-item:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.category-item h1 {
+  font-size: 18px;
+}
+.category-item img {
+  width: 50px;
+  width: 140px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+  
+  
