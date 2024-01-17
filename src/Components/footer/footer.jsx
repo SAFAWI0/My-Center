@@ -15,22 +15,14 @@ export const Footer = () => {
           </div>
           <ul>
             <li>
-              <a href="https://www.facebook.com/earthlinktele/?locale=ar_AR">
-                <img src={imag1} alt="imageIcon" />
-              </a>
+              <img src={imag1} alt="imageIcon" />
             </li>
 
             <li>
-              <a
-                href={
-                  "https://www.instagram.com/aon.iq?igsh=MXh2ZXNiM2Y3NGg4bA=="
-                }
-              />
               <img src={imag2} alt="imageIcon" />
             </li>
 
             <li>
-              <a href={"https://twitter.com/EarthlinkTele"} />
               <FaXTwitter />
             </li>
           </ul>
