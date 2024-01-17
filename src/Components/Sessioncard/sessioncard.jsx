@@ -1,6 +1,6 @@
-import React from "react";
+
 import "./sessioncard.css";
-import covere from "../../assets/aon.png";
+import covere from "../../assets/1.png";
 import { CiStar } from "react-icons/ci";
 import LikeButton from "../Likebutton/Like";
 import Container from "../Container/container";
@@ -9,7 +9,7 @@ export const Sessioncard = () => {
   return (
     <div>
       <Container>
-        <div className="content">
+        <div className="contentt">
           <div className="coverblock"> <img src={covere} className="cover"></img></div>
          
           <div className="like">
