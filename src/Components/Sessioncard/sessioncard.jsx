@@ -4,13 +4,17 @@ import covere from "../../assets/aon.png";
 import { CiStar } from "react-icons/ci";
 import LikeButton from "../Likebutton/Like";
 import Container from "../Container/container";
+import { Link } from "react-router-dom";
+import detiles from "../Detiles/detiles";
+import { HomeScreen } from "../../screens/HomeScreen/homeScreen";
 
 export const Sessioncard = () => {
   return (
     <div>
+      
       <Container>
         <div className="content">
-          <div className="coverblock"> <img src={covere} className="cover"></img></div>
+        <Link to={HomeScreen}><div className="coverblock"> <img src={covere} className="cover"></img></div></Link>
          
           <div className="like">
             <LikeButton />
@@ -28,6 +32,7 @@ export const Sessioncard = () => {
           </div>
         </div>
       </Container>
+      
     </div>
   );
 };
