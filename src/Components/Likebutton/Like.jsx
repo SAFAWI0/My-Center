@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as solidHeart, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const LikeButton = () => {
   const [liked, setLiked] = useState(false);
@@ -7,12 +9,24 @@ const LikeButton = () => {
     setLiked(!liked);
   };
 
+  const iconStyle = {
+    color: liked ? '#e74c3c' : '#d5bdaf', // Change color for liked state to red, and unliked to white
+    backgroundColor: liked ? '#fff' : 'transparent', // Change background color for liked state to white, and unliked to transparent
+    borderRadius: '50%', // Make the background circular
+    padding: '10px', // Add padding for spacing
+    cursor: 'pointer',
+    fontSize: '26px',
+    
+    transition: 'color 0.3s ease, background-color 0.3s ease', // Add transition for both color and background-color
+  };
+
   return (
     <div>
-      <button onClick={handleLikeClick}>
-        {liked ? 'Unlike' : 'Like'} {/* Change the button label based on the liked state */}
-      </button>
-      <span>{liked ? '👍' : '👎'}</span> {/* Change the icon based on the liked state */}
+      <FontAwesomeIcon
+        icon={liked ? solidHeart : faHeart}
+        style={iconStyle}
+        onClick={handleLikeClick}
+      />
     </div>
   );
 };

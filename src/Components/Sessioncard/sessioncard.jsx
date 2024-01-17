@@ -1,27 +1,33 @@
-import React from 'react'
-import './Sessioncard.css'
-import imge from 'https://picsum.photos/903/909'
+import React from "react";
+import "./sessioncard.css";
+import covere from "../../assets/aon.png";
 import { CiStar } from "react-icons/ci";
-import LikeButton from '../Likebutton/Like';
+import LikeButton from "../Likebutton/Like";
+import Container from "../Container/container";
 
-function Sessioncard() {
+export const Sessioncard = () => {
   return (
     <div>
-      <div className='content'>
-        <img src={imge} className='cover'/ >
-            <footer className='foot'>
-                <div className='lift'>
-                <h2>Title of the session</h2>
-                <CiStar/>
-                </div>
-                <div className='right'>
-                <h2>price</h2>
-                <LikeButton />
-                </div>
-            </footer>
-      </div>
+      <Container>
+        <div className="content">
+          <div className="coverblock"> <img src={covere} className="cover"></img></div>
+         
+          <div className="like">
+            <LikeButton />
+          </div>
+          <div className="foot">
+            <div className="left">
+              <h2>اسم الجلسة المباركه</h2>
+              <div className="reting">
+              <CiStar className="star" /><span>2.5</span>
+              </div>
+            </div>
+            <div className="right">
+              <h2>السعر</h2>
+            </div>
+          </div>
+        </div>
+      </Container>
     </div>
-  )
-}
-
-export default Sessioncard
+  );
+};
