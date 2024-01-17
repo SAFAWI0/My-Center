@@ -9,6 +9,7 @@ export const Categories = () => {
           {cate.map((el, i) => (
             <li key={i}>
               <div className="category-item">
+                <img src={el.image} />
                 <h1>{el.name}</h1>
               </div>
             </li>

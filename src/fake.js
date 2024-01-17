@@ -1,3 +1,10 @@
+
+import img2 from "./assets/2.png"
+import img3 from "./assets/3.png"
+import img4 from "./assets/4.png"
+import img5 from "./assets/5.png"
+import img6 from "./assets/6.png"
+
 export const products = [
   {
     id: 1,
@@ -49,17 +56,23 @@ export const images = [
 export const cate = [
   {
     name: "الجراحة التجميلية",
+    image:[img6]
+
   },
   {
     name: " الجلدية والتجميل",
+    image:[img3]
   },
   {
     name: " طب الاسنان",
+    image:[img5]
   },
   {
     name: " زراعة الشعر",
+    image:[img4]
   },
   {
     name: " تداخلات التجميل",
+    image:[img2]
   },
 ];
