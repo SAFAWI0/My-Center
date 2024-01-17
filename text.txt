@@ -1,31 +1,40 @@
+import "./footer.css";
+import Container from "../Container/container";
+import ima1 from "../../assets/facebook.png";
+import ima2 from "../../assets/instagram.png";
+import ima3 from "../../assets/x.png";
+import aon from "../../assets/aon.png";
 
-import "./page.css";
-import { useParams } from "react-router-dom";
-import { FaStar } from "react-icons/fa";
-import Container from "../../Components/Container/container";
-
-export const Page = () => {
-  const { id } = useParams();
-
+export const Footer = () => {
   return (
-    <div>
+    <div className="footer">
       <Container>
-        <div className="page-content">
-          <div className="image">
-            <img className="background" src="https://picsum.photos/900/800" />
-            <div className="content">
-              <h1>Beauty</h1>
-              <img className="logo" src="https://picsum.photos/900/900" />
-            </div>
+        <div className="content">
+          <div className="title">
+            <p>By - Aon 2023 </p>
+            <img src={aon} alt="aonIcon"></img>
           </div>
-          <div className="evaluation">
-            <FaStar style={{ color: "gold" }} />
-            <p>
-              2.5
-              : تقييم المركز</p>
-          </div>
-            <span>center is good</span>
-          <p>:ايام الدوام</p>
+          <ul>
+            <li>
+              <a href={"https://www.facebook.com/earthlinktele/?locale=ar_AR"}>
+                <img src={ima1} alt="facebookIcon" />
+              </a>
+            </li>
+            <li>
+              <a
+                href={
+                  "https://www.instagram.com/aon.iq?igsh=MXh2ZXNiM2Y3NGg4bA=="
+                }
+              >
+                <img src={ima2} alt="instagramIcon" />
+              </a>
+            </li>
+            <li>
+              <a href={"https://twitter.com/EarthlinkTele"}>
+                <img src={ima3} alt="xIcon" />
+              </a>
+            </li>
+          </ul>
         </div>
       </Container>
     </div>
@@ -33,26 +42,45 @@ export const Page = () => {
 };
 
 
-.page-content .image .background {
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
+.footer {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
 }
-.page-content .image .content .logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: relative;
-  margin-top: -100px;
-}
-.page-content .evaluation{
-    margin-top: 20px;
+.footer .content ul {
   display: flex;
-  justify-content: end;
+  list-style-type: none;
+  gap: 32px;
+}
+.footer .content p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer .content ul li a {
+  color: #000;
+  font-size: 24px;
+}
+.footer .content img {
+  width: 24px;
+}
+.footer .content .title {
+  display: flex;
   align-items: center;
 }
+.footer .content .title img {
+  width: 50px;
+  height: 50px;
+}
 
+@media screen and (max-width: 430px) {
+  .footer .content ul {
+    gap: 32px;
+  }
+}
 
+<<<<<<< HEAD
   <div className="search-box">
           <button>
             <SearchOutlined style={{ paddingLeft: "10px", fontSize: "18px" }} />
@@ -133,3 +161,16 @@ export const Categories = () => {
     </div>
   );
 };src/Components/Sessioncard
+=======
+@media screen and (max-width: 360px) {
+  .footer .content ul {
+    gap: 24px;
+  }
+  .footer .content p {
+    font-size: 16px;
+  }
+  .footer .content ul li a {
+    font-size: 20px;
+  }
+}
+>>>>>>> c5e534f30c44e6374a2bc8836f53a0a419734f17
