@@ -1,5 +1,7 @@
 import Header from "../../Components/Header/header";
 import { Products } from "../../Components/Products/products";
+import { Footer } from "../../Components/footer/footer";
+
 
 
 export const HomeScreen = () => {
@@ -7,7 +9,7 @@ export const HomeScreen = () => {
     <div>
       <Header />
       <Products />
-      
+      <Footer/>
     </div>
   );
 };
