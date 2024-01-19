@@ -1,6 +1,6 @@
 import React from "react";
 import "./sessioncard.css";
-import covere from "../../assets/aon.png";
+import covere from "../../assets/facebook.png";
 import { CiStar } from "react-icons/ci";
 import LikeButton from "../Likebutton/Like";
 import Container from "../Container/container";
@@ -14,7 +14,7 @@ export const Sessioncard = () => {
       
       <Container>
         <div className="content">
-        <Link to={HomeScreen}><div className="coverblock"> <img src={covere} className="cover"></img></div></Link>
+        <Link to={'/'}><div className="coverblock"> <img src={covere} className="cover"></img></div></Link>
          
           <div className="like">
             <LikeButton />
