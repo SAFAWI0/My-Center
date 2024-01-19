@@ -29,12 +29,7 @@ export const Page = () => {
             <span>center is good</span>
           <p>:ايام الدوام</p>
 
-          <br/>
-          <ul className="single-column-list">
-            <li><Sessioncard/></li>
-            <li><Sessioncard/></li>
-            <li><Sessioncard/></li>
-          </ul>
+            <Sessioncard/>
           
         </div>
       </Container>
