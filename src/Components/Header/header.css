@@ -16,11 +16,8 @@
   font-family: "Pacifico";
 }
 
-.header .content a {
+.header .content .icon {
   font-size: 24px;
   color: #000;
-}
-.header .content .categ {
-  font-size: 24px;
   cursor: pointer;
 }
