@@ -2,6 +2,8 @@ import "./page.css";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import Container from "../Components/Container/container";
+import { Sessioncard } from "../Components/Sessioncard/sessioncard";
+
 
 
 export const Page = () => {
@@ -26,6 +28,14 @@ export const Page = () => {
           </div>
             <span>center is good</span>
           <p>:ايام الدوام</p>
+
+          <br/>
+          <ul className="single-column-list">
+            <li><Sessioncard/></li>
+            <li><Sessioncard/></li>
+            <li><Sessioncard/></li>
+          </ul>
+          
         </div>
       </Container>
     </div>

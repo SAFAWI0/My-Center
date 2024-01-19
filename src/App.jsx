@@ -24,6 +24,7 @@ const ProtectedRoute = ({ comp }) => {
   return isLogin ? comp : <Navigate to={"/login"} />;
 };
 
+
 function App() {
   return (
     <div>
