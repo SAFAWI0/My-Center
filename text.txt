@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./footer.css";
 import Container from "../Container/container";
 import ima1 from "../../assets/facebook.png";
@@ -174,3 +175,5 @@ export const Categories = () => {
   }
 }
 >>>>>>> c5e534f30c44e6374a2bc8836f53a0a419734f17
+=======
+>>>>>>> d5744624cc1a8b9940526e01ea37de176d91ae6e

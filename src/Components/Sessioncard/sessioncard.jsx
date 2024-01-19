@@ -1,11 +1,17 @@
-import React from "react";
+
 import "./sessioncard.css";
+
 import covere from "../../assets/facebook.png";
 import { FaStar } from "react-icons/fa";
+
+// import covere from "../../assets/1.png";
+import { CiStar } from "react-icons/ci";
 import LikeButton from "../Likebutton/Like";
-import Container from "../Container/container";
+// import Container from "../Container/container";
+
 import { Link } from "react-router-dom";
 import { HomeScreen } from "../../screens/HomeScreen/homeScreen";
+import Container from "../Container/container";
 //import { Link } from "react-router-dom";
 //import detiles from "../Detiles/detiles";
 //import { HomeScreen } from "../../screens/HomeScreen/homeScreen";
@@ -14,12 +20,17 @@ export const Sessioncard = () => {
   return (
     <div>
       <Container>
-        <div className="content">
+        <div  className="content">
           <div className="coverblock">
             <Link to={HomeScreen}> hhhhh</Link>
           
              <img src={covere} className="cover" />
           </div>
+
+        <div className="contentt">
+          <div className="coverblock"> <img src={covere} className="cover"></img></div>
+         
+
           <div className="like">
             <LikeButton />
           </div>
@@ -36,6 +47,7 @@ export const Sessioncard = () => {
               <h2>السعر</h2>
             </div>
           </div>
+        </div>
         </div>
       </Container>
     </div>

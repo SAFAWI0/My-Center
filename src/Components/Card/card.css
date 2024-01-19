@@ -5,6 +5,20 @@
 text-decoration: none;
 color: #000;
 }
+.list-item .title{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+ font-size: 35px;
+ gap: 10px;
+
+}
+.list-item .title p{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-family: 'Lalezar';
+}
 /*
 .list-products .view-more {
 display: flex;

@@ -5,10 +5,10 @@ import { Footer } from "../../Components/footer/footer";
 
 export const HomeScreen = () => {
   return (
-    <div>  
+    <div>
       <Header />
       <Products />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
