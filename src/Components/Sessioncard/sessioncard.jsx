@@ -19,37 +19,27 @@ import Container from "../Container/container";
 export const Sessioncard = () => {
   return (
     <div>
-      <Container>
-        <div  className="content">
-          <div className="coverblock">
-            <Link to={HomeScreen}> hhhhh</Link>
-          
-             <img src={covere} className="cover" />
-          </div>
-
-        <div className="contentt">
-          <div className="coverblock"> <img src={covere} className="cover"></img></div>
-         
-
-          <div className="like">
-            <LikeButton />
-          </div>
-          <div className="foot">
-            <div className="left">
-              <h2>اسم الجلسة المباركه</h2>
-              <div className="reting">
-                <FaStar style={{ color: "gold" }} />
-
-                <span>2.5</span>
-              </div>
-            </div>
-            <div className="right">
-              <h2>السعر</h2>
-            </div>
+    <Container>
+    <div className="content">
+    <Link to={HomeScreen}><div className="coverblock"> <img src={covere} className="cover"></img></div></Link>
+     
+      <div className="like">
+        <LikeButton />
+      </div>
+      <div className="foot">
+        <div className="left">
+          <h2>اسم الجلسة المباركه</h2>
+          <div className="reting">
+          <CiStar className="star" /><span>2.5</span>
           </div>
         </div>
+        <div className="right">
+          <h2>السعر</h2>
         </div>
-      </Container>
+      </div>
     </div>
+  </Container>
+  
+</div>
   );
 };
