@@ -30,12 +30,12 @@ export const Page = () => {
           <p>:ايام الدوام</p>
 
           <br/>
-          <ul className="single-column-list">
+          {/* <ul className="single-column-list">
             <li><Sessioncard/></li>
             <li><Sessioncard/></li>
             <li><Sessioncard/></li>
-          </ul>
-          
+          </ul> */}
+          <Sessioncard/>
         </div>
       </Container>
     </div>

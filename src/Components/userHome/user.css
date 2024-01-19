@@ -1,0 +1,64 @@
+.user {
+  margin-top: 18px;
+}
+.content-user {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.content-user p {
+  color: #d14f13;
+  font-size: 22px;
+  margin-top: 18px;
+}
+
+.content-user .icon {
+  font-size: 70px;
+  color: #7fc7d9;
+}
+.content-user .iconPhone {
+  font-size: 50px;
+  margin-left: 8px;
+  color: #0b60b0;
+}
+.content-user span {
+  color: #d14f13;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 360px) {
+  .content-user p {
+    font-size: 18px;
+  }
+
+  .content-user .icon {
+    font-size: 50px;
+  }
+  .content-user .iconPhone {
+    font-size: 40px;
+    margin-left: 0;
+  }
+  .content-user span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .content-user p {
+    font-size: 18px;
+  }
+
+  .content-user .icon {
+    font-size: 50px;
+  }
+  .content-user .iconPhone {
+    font-size: 40px;
+    margin-left: 0;
+  }
+  .content-user span {
+    font-size: 18px;
+  }
+}

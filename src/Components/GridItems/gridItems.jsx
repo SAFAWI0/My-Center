@@ -14,9 +14,7 @@ export const GridItems = () => {
             <GoArrowLeft /> <p>المزيد</p>
           </Link>
           <div className="grid-description">
-            <span>
-              <p>مواد تجميل حديثة و مطورة</p>
-            </span>
+            <span>مواد تجميل حديثة و مطورة</span>
             <p>المركز جميل ويحتوي ع جميع الاجهزة</p>
           </div>
         </div>
