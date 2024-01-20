@@ -13,7 +13,7 @@ const url='https://www.youtube.com/watch?v=5gO0xpY_Y3E&ab_channel=dhePerissann'
       <Container>
         <div className="contentes">
           <img src={cover}  className="cover" />
-          <h1 className='name'>ابتسامة هوليود</h1>
+          <h1 className='name'>ابتسامة هوليود rly</h1>
           <div className="discrept">
           <div className="reting">
                 <FaStar style={{ color: "gold" }} />
