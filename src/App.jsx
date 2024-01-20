@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen/loginScreen";
 import RegisterScreen from "./screens/RegisterScreen/registerScreen";
 import { HomeScreen } from "./screens/HomeScreen/homeScreen";
+import { Detiles } from "./Detiles/detiles";
 import { Page } from "./page/page";
 import { useAppStore } from "./store";
 import { useEffect, useState } from "react";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/login" element={<LoginScreen />} />
         <Route path=":id" element={<ProtectedRoute comp={<Page />} />} />
         <Route path="/Register" element={<RegisterScreen />} />
+        <Route path="/Detiles" element={<Detiles/>} />
       </Routes>
     </div>
   );

@@ -1,18 +1,22 @@
-.page-content .image .background {
+.page-content .imagep .background {
   width: 100%;
   height: 300px;
   border-radius: 8px;
 }
-.page-content .image .content .logo {
+.contentp {
+  display: flex;
+  justify-content: space-between;
+}
+.page-content .imagep .contentp .logop {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   position: relative;
-  margin-top: -100px;
+  margin-top: -50px;
   margin-right: 20px;
 }
 .page-content .evaluation {
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -25,16 +29,16 @@
 }
 
 .single-column-list li {
-  
+  margin-top: 30px;
   padding: 10px;
 }
 @media screen and (max-width: 430px) {
-  .page-content .image .background {
+  .page-content .imagep .background {
     height: 250px;
   }
 
   
-  .page-content .image .content .logo {
+  .page-content .imagep .contentp .logop {
     width: 120px;
     height: 120px;
     margin-right: 10px;
@@ -42,7 +46,7 @@
 }
 
 @media screen and (max-width: 360px) {
-  .page-content .image .content .logo {
+  .page-content .imagep .contentp .logop {
     width: 100px;
     height: 100px;
   }

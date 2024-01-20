@@ -6,6 +6,7 @@ import { Sessioncard } from "../Components/Sessioncard/sessioncard";
 
 
 
+
 export const Page = () => {
   const { id } = useParams();
 
@@ -13,11 +14,11 @@ export const Page = () => {
     <div>
       <Container>
         <div className="page-content">
-          <div className="image">
+          <div className="imagep">
             <img className="background" src="https://picsum.photos/900/800" />
-            <div className="content">
+            <div className="contentp">
               <h1>Beauty</h1>
-              <img className="logo" src="https://picsum.photos/900/900" />
+              <img className="logop" src="https://picsum.photos/900/900" />
             </div>
           </div>
           <div className="evaluation">
@@ -28,14 +29,14 @@ export const Page = () => {
           </div>
             <span>center is good</span>
           <p>:ايام الدوام</p>
+          
 
           <br/>
-          {/* <ul className="single-column-list">
+           <ul className="single-column-list">
             <li><Sessioncard/></li>
             <li><Sessioncard/></li>
             <li><Sessioncard/></li>
-          </ul> */}
-          <Sessioncard/>
+          </ul> 
         </div>
       </Container>
     </div>

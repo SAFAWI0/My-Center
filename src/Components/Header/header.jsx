@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="header">
       <Container>
-        <div className="content">
+        <div className="contenth">
           <RiHome2Line className="icon" onClick={handleOpenaD} />
           <div className="logo">
             <h2>My Center</h2>
