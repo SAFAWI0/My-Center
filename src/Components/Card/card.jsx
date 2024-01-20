@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { SlActionUndo } from "react-icons/sl";
 import { products } from "../../fake";
 import { HiMiniScissors } from "react-icons/hi2";
+import Centercard from "../Centercard/centercard";
 export const Card = () => {
   return (
     <div>
@@ -10,8 +11,10 @@ export const Card = () => {
         <div className="title">
           <HiMiniScissors style={{ marginBottom: "12px" }} />
           <p> ... المراكز</p>
-        </div>
-        {products.map((el, i) => (
+          </div> 
+          <Centercard/>
+       
+        {/* {products.map((el, i) => (
           <div key={i} style={{ marginBottom: "10px" }}>
             <a href={`${el.id}`}>
               <div className="imag-item">
@@ -31,7 +34,8 @@ export const Card = () => {
               </div>
             </a>
           </div>
-        ))}
+        ))} */}
+        
       </div>
     </div>
   );

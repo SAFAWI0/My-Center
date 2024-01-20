@@ -11,9 +11,9 @@ const LikeButton = () => {
 
   const iconStyle = {
     color: liked ? '#e74c3c' : '#d5bdaf', // Change color for liked state to red, and unliked to white
-    backgroundColor: liked ? '#fff' : 'transparent', // Change background color for liked state to white, and unliked to transparent
+    backgroundColor: liked ? 'transparent' : 'transparent', // Change background color for liked state to white, and unliked to transparent
     borderRadius: '50%', // Make the background circular
-    padding: '10px', // Add padding for spacing
+    padding: '0px', // Add padding for spacing
     cursor: 'pointer',
     fontSize: '26px',
     

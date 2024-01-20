@@ -26,7 +26,7 @@ img {
 }
 
 .card {
-	background-color: #f8edeb;
+	background-color: #f8f9fa;
 	box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
 	border-radius: 15px;
 	overflow: hidden;

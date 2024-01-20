@@ -1,8 +1,9 @@
-import "./page.css";
+import style from "./page.module.css";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import Container from "../Components/Container/container";
 import { Sessioncard } from "../Components/Sessioncard/sessioncard";
+import Header from "../Components/Header/header";
 
 
 
@@ -11,17 +12,18 @@ export const Page = () => {
   const { id } = useParams();
 
   return (
-    <div>
+    <div >
       <Container>
-        <div className="page-content">
-          <div className="imagep">
-            <img className="background" src="https://picsum.photos/900/800" />
-            <div className="contentp">
+      <Header/>
+        <div className={style.content}>
+          <div className={style.imagep}>
+            <img className={style.background} src="https://picsum.photos/900/800" />
+            <div className={style.contentp}>
               <h1>Beauty</h1>
-              <img className="logop" src="https://picsum.photos/900/900" />
+              <img className={style.logop} src="https://picsum.photos/900/900" />
             </div>
           </div>
-          <div className="evaluation">
+          <div className={style.evaluation}>
             <FaStar style={{ color: "gold" }} />
             <p>
               2.5
@@ -32,7 +34,7 @@ export const Page = () => {
           
 
           <br/>
-           <ul className="single-column-list">
+           <ul className={style.column}>
             <li><Sessioncard/></li>
             <li><Sessioncard/></li>
             <li><Sessioncard/></li>

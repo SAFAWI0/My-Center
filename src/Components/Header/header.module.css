@@ -1,22 +1,25 @@
 .header {
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   position: sticky;
   top: 0;
   z-index: 3;
 }
-.contenth {
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
 }
-
-.header .contenth h2 {
+.logolink{
+  text-decoration: none;
+}
+.header .content h2 {
   font-family: "Pacifico";
 }
 
-.header .contenth .icon {
+.header .content .icon {
   font-size: 24px;
   color: #000;
   cursor: pointer;
