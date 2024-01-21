@@ -1,10 +1,10 @@
-import  {create}  from "zustand";
+import { create } from "zustand";
 
 export const useAppStore = create((set) => ({
   isOpen: false,
-  isOpenD: false,
   isLogin: false,
-  setOpen: (isOpen) => set( {isOpen} ),
-  setOpenD: (isOpenD) => set( {isOpenD} ),
+  inf: {},
+  setInf: (inf) => set({ inf }),
+  setOpen: (isOpen) => set({ isOpen }),
   setIsLogin: (isLogin) => set({ isLogin }),
 }));

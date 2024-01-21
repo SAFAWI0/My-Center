@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import Container from "../Components/Container/container";
 import { Sessioncard } from "../Components/Sessioncard/sessioncard";
+import Header from "../Components/Header/header";
+
 
 
 
@@ -11,6 +13,7 @@ export const Page = () => {
 
   return (
     <div>
+      <Header/>
       <Container>
         <div className="page-content">
           <div className="image">

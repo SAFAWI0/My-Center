@@ -6,7 +6,6 @@ import { HomeScreen } from "./screens/HomeScreen/homeScreen";
 import { Page } from "./page/page";
 import { useAppStore } from "./store";
 import { useEffect, useState } from "react";
-import { User } from "./Components/userHome/user";
 
 const ProtectedRoute = ({ comp }) => {
   const { isLogin, setIsLogin } = useAppStore();
@@ -24,11 +23,9 @@ const ProtectedRoute = ({ comp }) => {
   return isLogin ? comp : <Navigate to={"/login"} />;
 };
 
-
 function App() {
   return (
     <div>
-      <User/>
       <Routes>
         <Route path="/" element={<ProtectedRoute comp={<HomeScreen />} />} />
         <Route path="/login" element={<LoginScreen />} />

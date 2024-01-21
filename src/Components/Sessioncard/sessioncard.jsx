@@ -1,4 +1,3 @@
-
 import "./sessioncard.css";
 import covere from "../../assets/1.png";
 import { CiStar } from "react-icons/ci";
@@ -10,8 +9,11 @@ export const Sessioncard = () => {
     <div>
       <Container>
         <div className="contentt">
-          <div className="coverblock"> <img src={covere} className="cover"></img></div>
-         
+          <div className="coverblock">
+            {" "}
+            <img src={covere} className="cover"></img>
+          </div>
+
           <div className="like">
             <LikeButton />
           </div>
@@ -19,7 +21,8 @@ export const Sessioncard = () => {
             <div className="left">
               <h2>اسم الجلسة المباركه</h2>
               <div className="reting">
-              <CiStar className="star" /><span>2.5</span>
+                <CiStar className="star" />
+                <span>2.5</span>
               </div>
             </div>
             <div className="right">

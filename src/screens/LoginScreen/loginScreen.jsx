@@ -1,8 +1,9 @@
 import "./loginScreen.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../../Components/Container/container";
 import { useNavigate } from "react-router-dom";
 import { message } from "antd";
+import { useAppStore } from "../../store";
 
 const LoginScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,8 +13,7 @@ const LoginScreen = () => {
   const [password, setPassword] = useState("");
   const [messageApi, contextHolder] = message.useMessage();
   const [loading, setLoading] = useState(false);
-  const [email, estEmail] = useState([]);
-
+  const { inf, setInf } = useAppStore();
   const handleLogin = () => {
     setLoading(true);
     var myHeaders = new Headers();
@@ -61,13 +61,32 @@ const LoginScreen = () => {
         setLoading(false);
         console.log("error", error);
       });
-      
+
+    var myHeadersD = new Headers();
+    myHeadersD.append("Content-Type", "application/json");
+
+    var rawD = JSON.stringify({
+      email: inputValue,
+    });
+
+    var requestOptionsD = {
+      method: "POST",
+      headers: myHeadersD,
+      body: rawD,
+    };
+
+    fetch("http://localhost:3000/api/v1/user/filter", requestOptionsD)
+      .then((response) => response.json())
+      .then((result) => {
+        setInf(result);
+        console.log(inf);
+      })
+      .catch((error) => console.log("error", error));
   };
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
-
   const handlePasswordInputChange = (e) => {
     setPasswordFieldEmpty(e.target.value === "");
     setPassword(e.target.value);
@@ -75,48 +94,6 @@ const LoginScreen = () => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-
-
-
-
-
-
-  
-
-
-
-// const safaa =()=>{
-  // var myHeaders = new Headers();
-  // myHeaders.append("Content-Type", "application/json");
-  
-  // var raw = JSON.stringify({
-  //   email: inputValue && inputValue.includes('@') ? inputValue : '',
-  // });
-  
-  // var requestOptions = {
-  //   method: 'POST',
-  //   headers: myHeaders,
-  //   body: raw,
-  // };
-  
-  // fetch("http://localhost:3000/api/v1/user/filter", requestOptions)
-  //   .then(response => response.json())
-  //   .then(result => setInf(result))
-  //   .catch(error => console.log('error', error));
-
-// }
-
-
-  
-
-
-
-
-
-
-
-
-
 
   return (
     <div className="loginScreen">
@@ -136,28 +113,13 @@ const LoginScreen = () => {
               </div>
             )}
           </div>
-              <p>{inputValue}</p>
           <p className="logoName">My Center</p>
           <div className="form">
             <input
-              placeholder="Email or Full Name"
+              placeholder="Enter your Email"
               value={inputValue}
               onChange={handleInputChange}
             />
-
-
-          <input
-              value={email}
-              onChange={(e) => estEmail(e.target.value)}
-            />
-
-
-<button onClick={safaa}>saaa</button>
-
-
-
-
-
 
             <div className="password">
               <input

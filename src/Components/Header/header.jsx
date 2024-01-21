@@ -4,22 +4,22 @@ import { RiHome2Line } from "react-icons/ri";
 import { CgFormatJustify } from "react-icons/cg";
 import { ViewBox } from "../ViewBox/viewBox";
 import { useAppStore } from "../../store";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const { setOpen, setOpenD } = useAppStore();
+  const { setOpen } = useAppStore();
 
   const handleOpenDrawer = () => {
     setOpen(true);
-  };
-  const handleOpenaD = () => {
-    setOpenD(true);
   };
 
   return (
     <div className="header">
       <Container>
         <div className="content">
-          <RiHome2Line className="icon" onClick={handleOpenaD} />
+          <Link to="/">
+            <RiHome2Line className="icon" />
+          </Link>
           <div className="logo">
             <h2>My Center</h2>
           </div>
