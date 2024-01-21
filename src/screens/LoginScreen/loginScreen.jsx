@@ -2,7 +2,7 @@ import "./loginScreen.css";
 import { useState } from "react";
 import Container from "../../Components/Container/container";
 import { useNavigate } from "react-router-dom";
-import { useAppStore } from "../../store";
+import { message } from "antd";
 
 const LoginScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -10,15 +10,19 @@ const LoginScreen = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState();
   const [password, setPassword] = useState("");
-  const { setIsLogin } = useAppStore();
+  const [messageApi, contextHolder] = message.useMessage();
+  const [loading, setLoading] = useState(false);
+  const [email, estEmail] = useState([]);
 
   const handleLogin = () => {
+    setLoading(true);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      name:inputValue,
-      email:inputValue,
+      // name: inputValue && inputValue.includes('@') ? '' : inputValue,
+      // email: inputValue && inputValue.includes('@') ? inputValue : '',
+      email: inputValue,
       password,
     });
 
@@ -36,14 +40,28 @@ const LoginScreen = () => {
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {
-          setIsLogin(true);
           localStorage.setItem("Token", result.token);
           navigate("/");
+          setLoading(false);
         } else {
-          alert(result.msg);
+          //waring
+          messageApi.open({
+            type: "warning",
+            content: result.msg,
+          });
+          setLoading(false);
         }
       })
-      .catch((error) => console.log("error", error));
+      .catch((error) => {
+        //error
+        messageApi.open({
+          type: "error",
+          content: "something wrong...",
+        });
+        setLoading(false);
+        console.log("error", error);
+      });
+      
   };
 
   const handleShowPassword = () => {
@@ -57,6 +75,47 @@ const LoginScreen = () => {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
+
+
+
+
+
+
+
+
+// const safaa =()=>{
+  // var myHeaders = new Headers();
+  // myHeaders.append("Content-Type", "application/json");
+  
+  // var raw = JSON.stringify({
+  //   email: inputValue && inputValue.includes('@') ? inputValue : '',
+  // });
+  
+  // var requestOptions = {
+  //   method: 'POST',
+  //   headers: myHeaders,
+  //   body: raw,
+  // };
+  
+  // fetch("http://localhost:3000/api/v1/user/filter", requestOptions)
+  //   .then(response => response.json())
+  //   .then(result => setInf(result))
+  //   .catch(error => console.log('error', error));
+
+// }
+
+
+  
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="loginScreen">
       <Container>
@@ -68,6 +127,14 @@ const LoginScreen = () => {
             }
           }}
         >
+          <div className={`loginScreen ${loading ? "loading-screen" : ""}`}>
+            {loading && (
+              <div className="loading-indicator">
+                <span className="loader"></span>
+              </div>
+            )}
+          </div>
+              <p>{inputValue}</p>
           <p className="logoName">My Center</p>
           <div className="form">
             <input
@@ -75,6 +142,21 @@ const LoginScreen = () => {
               value={inputValue}
               onChange={handleInputChange}
             />
+
+
+          <input
+              value={email}
+              onChange={(e) => estEmail(e.target.value)}
+            />
+
+
+<button onClick={safaa}>saaa</button>
+
+
+
+
+
+
             <div className="password">
               <input
                 placeholder="Password"
@@ -100,6 +182,7 @@ const LoginScreen = () => {
           </p>
         </div>
       </Container>
+      {contextHolder}
     </div>
   );
 };

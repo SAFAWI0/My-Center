@@ -4,6 +4,7 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import Container from "../../Components/Container/container";
 import { useNavigate } from "react-router-dom";
+import { message } from "antd";
 
 const RegisterScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,8 +14,11 @@ const RegisterScreen = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [messageApi, contextHolder] = message.useMessage();
 
   const handleSignup = () => {
+    setLoading(true);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -39,14 +43,30 @@ const RegisterScreen = () => {
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {
-          result.success;
-          alert("success");
+          messageApi.open({
+            type: "success",
+            content: "Registration Successful",
+          });
           navigate("/Login");
+          setLoading(false);
         } else {
-          alert(result.msg);
+          //waring
+          messageApi.open({
+            type: "warning",
+            content: "mobile number or email error",
+          });
+          setLoading(false);
         }
       })
-      .catch((error) => console.log("error", error));
+      .catch((error) => {
+        //error
+        messageApi.open({
+          type: "error",
+          content: "something wrong...",
+        });
+        setLoading(false);
+        console.log("error", error);
+      });
   };
 
   const handleShowPassword = () => {
@@ -69,6 +89,13 @@ const RegisterScreen = () => {
             }
           }}
         >
+          <div className={`loginScreen ${loading ? "loading-screen" : ""}`}>
+            {loading && (
+              <div className="loading-indicator">
+                <span className="loader"></span>
+              </div>
+            )}
+          </div>
           <p className="logoName">My Center</p>
           <p className="title">
             Sign up to see all the discounts and new offers
@@ -115,6 +142,7 @@ const RegisterScreen = () => {
           </p>
         </div>
       </Container>
+      {contextHolder}
     </div>
   );
 };
