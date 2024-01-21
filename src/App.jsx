@@ -26,6 +26,8 @@ const ProtectedRoute = ({ comp }) => {
 function App() {
   return (
     <div>
+
+
       <Routes>
         <Route path="/" element={<ProtectedRoute comp={<HomeScreen />} />} />
         <Route path="/login" element={<LoginScreen />} />
