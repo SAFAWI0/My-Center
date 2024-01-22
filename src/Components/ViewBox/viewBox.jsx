@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 export const ViewBox = () => {
   const { isOpen, setOpen, inf } = useAppStore();
   const navigate = useNavigate();
+
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -31,9 +32,9 @@ export const ViewBox = () => {
     if (inf.length > 0) {
       const user = inf[0];
       setUserInfo({
-        name: user.name || "",
-        email: user.email || "",
-        phone: user.phone || "",
+        name: user.name,
+        email: user.email,
+        phone: user.phone,
       });
       localStorage.setItem("userInfo", JSON.stringify(user));
     }
@@ -42,7 +43,7 @@ export const ViewBox = () => {
   const handleLogout = () => {
     navigate("/login");
     localStorage.removeItem("Token");
-    localStorage.removeItem("userInfo"); // قم بإزالة المعلومات عند تسجيل الخروج
+    localStorage.removeItem("userInfo"); 
     setOpen(false);
   };
 
