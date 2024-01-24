@@ -7,7 +7,7 @@ import { products } from "../../fake";
 
 export const GridItems = () => {
   return (
-    <div style={{ marginBottom: "12px" }}>
+    <div>
       <div className="grid-more">
         <div className="grid-content">
           <Link>
@@ -31,16 +31,14 @@ export const GridItems = () => {
                   </div>
                   <div className="grid-title-items">
                     <span>{el.name}</span>
-                    <p className="evaluation">
-                      {el.description}
-                      <SlActionUndo
-                        style={{ color: "#666", marginRight: "6px" }}
-                      />
-                    </p>
-                    <p className="evaluation">
+                    <div className="evaluation">
+                      <p>{el.description} </p>
+                      <SlActionUndo style={{ color: "#666", marginRight: "6px" }}/>
+                    </div>
+                    {/* <p className="evaluation">
                       <FaStar style={{ color: "gold" }} />
                       {el.evaluation}
-                    </p>
+                    </p> */}
                   </div>
                 </a>
               </div>

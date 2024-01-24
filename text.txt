@@ -1,50 +1,33 @@
-return (
-    <div>
-
-      <Container>
-        <div className="contentt">
-          <div className="coverblock">
-            {" "}
-            <img src={covere} className="cover"></img>
-          </div>
-
-          <div className="like">
-            <LikeButton />
-          </div>
-          <div className="foot">
-            <div className="left">
-              <h2>اسم الجلسة المباركه</h2>
-              <div className="reting">
-                <CiStar className="star" />
-                <span>2.5</span>
-              </div>
+ <div className="content-categ">
+          <Link to="Register">
+            <div className="contentIn">
+              <p>تسجيل الدخول أو انشاء حساب</p>
+              <FaUserCircle />
             </div>
-            <div className="right">
-              <h2>السعر</h2>
+          </Link>
+        </div>
+        <hr style={{ marginTop: "20px" }} />
+        <div className="user">
+          {userInfo.name && (
+            <div className="content-user">
+              <p>{userInfo.name} </p>
+              <FcBusinesswoman className="icon" />
             </div>
-
-    <Container>
-    <div className="content">
-    <Link to={HomeScreen}><div className="coverblock"> <img src={covere} className="cover"></img></div></Link>
-     
-      <div className="like">
-        <LikeButton />
-      </div>
-      <div className="foot">
-        <div className="left">
-          <h2>اسم الجلسة المباركه</h2>
-          <div className="reting">
-          <CiStar className="star" /><span>2.5</span>
-
-          </div>
+          )}
+          {userInfo.email && (
+            <div className="content-user">
+              <span>{userInfo.email} </span>
+              <MdMarkEmailRead className="icon" />
+            </div>
+          )}
+          {userInfo.phone && (
+            <div className="content-user">
+              <span style={{ marginLeft: "12px" }}>{userInfo.phone} </span>
+              <FaPhoneAlt className="iconPhone" />
+            </div>
+          )}
         </div>
-        <div className="right">
-          <h2>السعر</h2>
+        <div className="Logout" onClick={handleLogout}>
+          <p>تسجيل خروج</p>
+          <LuLogOut className="LuLogOut" />
         </div>
-      </div>
-    </div>
-  </Container>
-  
-</div>
-  );
-};

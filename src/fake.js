@@ -13,6 +13,7 @@ export const products = [
     background: "https://picsum.photos/400/600",
     evaluation: 3,
     description: "center is good",
+    work_time:"Sunday Tuesday Monday Saturday"
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const products = [
     background: "https://picsum.photos/400/400",
     evaluation: 2.5,
     description: "center is good",
+    work_time:"Sunday Tuesday Monday Saturday"
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ export const products = [
     background: "https://picsum.photos/400/500",
     evaluation: 4,
     description: "center is good",
+    work_time:"Sunday Tuesday Monday Saturday"
   },
   {
     id: 4,
@@ -37,6 +40,7 @@ export const products = [
     background: "https://picsum.photos/900/400",
     evaluation: 5,
     description: "center is good",
+    work_time:"Sunday Tuesday Monday Saturday"
   },
   {
     id: 5,
@@ -45,6 +49,7 @@ export const products = [
     background: "https://picsum.photos/500/400",
     evaluation: 10,
     description: "center is good",
+    work_time:"Sunday Tuesday Monday Saturday"
   },
 ];
 export const images = [

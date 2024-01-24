@@ -18,6 +18,14 @@ const RegisterScreen = () => {
   const [messageApi, contextHolder] = message.useMessage();
 
   const handleSignup = () => {
+    if (!name || !phone || !email || !password) {
+      messageApi.open({
+        type: "warning",
+        content: "Please fill in all fields",
+      });
+      return;
+    }
+
     setLoading(true);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");

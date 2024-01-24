@@ -1,23 +1,22 @@
 .list-item {
-  margin-top: 80px;
+  margin-top: 20px;
 }
-.list-item a{
-text-decoration: none;
-color: #000;
+.list-item a {
+  text-decoration: none;
+  color: #000;
 }
-.list-item .title{
+.list-item .title {
   display: flex;
   justify-content: end;
   align-items: center;
- font-size: 35px;
- gap: 10px;
-
+  font-size: 35px;
+  gap: 10px;
 }
-.list-item .title p{
+.list-item .title p {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 12px;
-  font-family: 'Lalezar';
+  font-family: "Lalezar";
 }
 /*
 .list-products .view-more {
@@ -42,23 +41,17 @@ align-items: center;
   margin-bottom: 4px;
 } */
 
-.list-item .title-item {
+.list-item .details-item {
   text-align: end;
   display: block;
 }
-.list-item .title-item span {
+.list-item .details-item span {
   font-size: 18px;
   font-weight: bold;
 }
-.list-item .title-item p {
+.list-item .details-item p {
   color: #666;
   margin-top: 4px;
-}
-.list-item .title-item .evaluation {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 6px;
 }
 
 .list-item .imag-item .backgrond {
@@ -73,4 +66,35 @@ align-items: center;
   position: relative;
   margin-top: -80px;
   margin-left: 20px;
+}
+
+.list-item .details-item .evaluation {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 6px;
+}
+.search-box {
+  margin-top: 100px;
+  display: flex;
+  border: 1px solid #ccc;
+  background-color: #f6f6f6;
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+}
+.search-box button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.search-box input {
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: #f6f6f6;
+  font-size: 18px;
 }
