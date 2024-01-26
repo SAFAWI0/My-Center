@@ -33,7 +33,7 @@ const Map = () => {
                 featureType: "water",
                 elementType: "geometry",
                 stylers: [
-                  { color: "#000" },
+                  { color: "red" },
                 ],
               },
               {
@@ -46,14 +46,7 @@ const Map = () => {
             ],
           });
 
-        // يمكنك إضافة المزيد من التخصيصات أو العمليات الأخرى هنا
-        // new window.google.maps.Marker({
-        //     position:  lat: 33.31525, lng: 44.37535,
-        //     map: map,
-        //     title: "موقع الماركر",
-        // يمكنك إضافة رمز مخصص للماركر إذا كنت ترغب
-        // icon: 'رابط لصورة أيقونة الماركر'
-        //   });
+       
       });
     };
 

@@ -2,11 +2,10 @@ import "./categories.css";
 import { cate } from "../../fake";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useAppStore } from "../../store";
 
-export const Categories = () => {
+export const Categories = ({ onCategoryClick }) => {
   const [value, setValue] = useState([]);
-  const {s, setS} = useAppStore();
+
   const getData = () => {
     var requestOptions = {
       method: "GET",
@@ -27,15 +26,15 @@ export const Categories = () => {
     getData();
   }, []);
 
- console.log("safaa",s)
   return (
     <div>
       <div className="categories">
         <ul>
           {value.map((el, i) => (
             <li key={i}>
-              <div className="category-item"
-               onClick={()=>setS(el.cat_id)}
+              <div
+                className="category-item"
+                onClick={() => onCategoryClick(el.cat_id)}
               >
                 <img src={el.img} />
                 <h1>{el.name}</h1>

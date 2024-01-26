@@ -27,14 +27,12 @@ const ProtectedRoute = ({ comp }) => {
 function App() {
   return (
     <div>
-
-
       <Routes>
-        <Route path="/" element={<ProtectedRoute comp={<HomeScreen />} />} />
-        <Route path="/login" element={<LoginScreen />} />
-        <Route path=":id" element={<ProtectedRoute comp={<Page />} />} />
         <Route path="/Register" element={<RegisterScreen />} />
-        <Route path="/Detiles" element={<Detiles />} />
+        <Route path="/login" element={<LoginScreen />} />
+        <Route path="/" element={<ProtectedRoute comp={<HomeScreen />} />} />
+        <Route path="/page/:id" element={<ProtectedRoute comp={<Page />} />} />
+        <Route path="/Detiles/:id" element={<ProtectedRoute comp={<Detiles />} />} />
       </Routes>
     </div>
   );

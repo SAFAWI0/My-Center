@@ -1,41 +1,67 @@
 import "./sessioncard.css";
-import covere from "../../assets/facebook.png";
-import { CiStar } from "react-icons/ci";
+import covere from "../../assets/barbie.jpg";
+import { FaStar } from "react-icons/fa";
 import LikeButton from "../Likebutton/Like";
-import Container from "../Container/container";
 import { Link } from "react-router-dom";
 import { Detiles } from "../Detiles/detiles";
 
 export const Sessioncard = () => {
-  
   return (
-    <div>
-      <Container>
-        <div className="contentt">
-        <Link to={'/Detiles'}> 
-          <div className="coverblock">
-         <img src={covere} className="cover"/>
-          
-          </div>
-          </Link>
-          <div className="like">
-            <LikeButton />
-          </div>
-          <div className="foot">
-            <div className="left">
-              <h2>اسم الجلسة المباركه</h2>
-              <div className="reting">
-                <CiStar className="star" />
-                <span>2.5</span>
-              </div>
-            </div>
-            <div className="right">
-              <h2>السعر</h2>
-            </div>
-          </div>
-          
+    <div className="Sessioncard">
+      <div className="card">
+        <div className="cover">
+          <img src={covere} />
         </div>
-      </Container>
+
+        <Link to={`/Detiles/${1}`}>
+          <div className="detile">
+            <span>!</span>
+            <p>تفاصيل أو الحجز </p>
+          </div>
+        </Link>
+
+        <div className="title">
+          <div className="titleNa">
+            <div className="eval">
+              <FaStar style={{ color: "gold" }} />
+              <span>2.5</span>
+            </div>
+            <h2>اسم الجلسة المباركه</h2>
+          </div>
+
+          <div className="price">
+            <span>10,000$</span>
+            <p>: السعر </p>
+          </div>
+        </div>
+      </div>
+      <div className="card">
+        <div className="cover">
+          <img src={covere} />
+        </div>
+
+        <Link to={`/Detiles/${1}`}>
+          <div className="detile">
+            <span>!</span>
+            <p>تفاصيل أو الحجز </p>
+          </div>
+        </Link>
+
+        <div className="title">
+          <div className="titleNa">
+            <div className="eval">
+              <FaStar style={{ color: "gold" }} />
+              <span>2.5</span>
+            </div>
+            <h2>اسم الجلسة المباركه</h2>
+          </div>
+
+          <div className="price">
+            <span>10,000$</span>
+            <p>: السعر </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

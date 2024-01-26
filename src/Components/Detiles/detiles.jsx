@@ -1,36 +1,36 @@
 import "./detiles.css";
 import { FaStar } from "react-icons/fa";
 import cover from "../../assets/barbie.jpg";
-
-
+import { useParams } from "react-router-dom";
 import Container from "../Container/container";
 import Header from "../Header/header";
 
-
-
 export const Detiles = () => {
-  const url ="https://www.youtube.com/watch?v=5gO0xpY_Y3E&ab_channel=dhePerissann";
+  const { id } = useParams();
+
   return (
     <div>
       <Header />
       <Container>
-        <div className="contentes">
+        <div className="detiles">
           <img src={cover} className="cover" />
-          <h1 className="name">ابتسامة هوليود rly</h1>
-          <div className="discrept">
-            <div className="reting">
-              <FaStar style={{ color: "gold" }} />
-              <span>2.5</span>
+          <h3 className="name">ابتسامة هوليود</h3>
+
+          <div className="subdis">
+            <div className="num">
+              <p>1 h</p>
+              <span>: الوقت الجلسة</span>
             </div>
-            <div className="subdis">
-              <h5 className="time">
-                وقت الجلسه: <span>1 ساعة</span>
-              </h5>
-              <h5 className="num">
-                عدد الجلسات: <span>1</span>
-              </h5>
+            <div className="num">
+              <p>5</p>
+              <span> : عدد الجلسات</span>
+            </div>
+            <div className="num">
+              <p>10,000</p>
+              <span> : السعر</span>
             </div>
           </div>
+
           <p className="detils">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
             labore neque ipsa est, officia modi dicta quidem itaque distinctio
@@ -39,15 +39,11 @@ export const Detiles = () => {
           </p>
           <div className="videobox">
             <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/watch?v=5gO0xpY_Y3E&ab_channel=dhePerissann"
-              title="YouTube Video"
-              frameBorder="0"
-              allowFullScreen
+              src="https://www.youtube.com/embed/xNRJwmlRBNU?si=LADecAmprD-IGUch"
+              title="YouTube video player"
             ></iframe>
           </div>
-          <button className="button-8">حجز الجلسه</button>
+          <button className="butt">حجز الجلسة</button>
         </div>
       </Container>
     </div>

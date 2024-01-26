@@ -5,25 +5,30 @@ import { products } from "../../fake";
 import { HiMiniScissors } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 import { SearchOutlined } from "@ant-design/icons";
-import { useAppStore } from "../../store";
+import { Categories } from "../Categories/categories";
+import { Link } from "react-router-dom";
+// import { useAppStore } from "../../store";
 
 export const Card = () => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [value, setValue] = useState();
-  const {s} = useAppStore();
-console.log(s)
-  const getData = (s) => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  // const { s } = useAppStore();
+  // console.log(s)
+  const getData = (cat) => {
     var requestOptions = {
       method: "GET",
     };
 
-    // let url = "http://localhost:3000/api/v1/centers/show"
-    // if (s) url =`http://localhost:3000/api/v1/centers/getCentersByCat?cat=${s}`
-    // else url=`http://localhost:3000/api/v1/centers/show?search=${search}`
+    let url = "http://localhost:3000/api/v1/centers/show";
+    if (search) {
+      url = `http://localhost:3000/api/v1/centers/show?search=${search}`;
+    } else if (cat) {
+      url = `http://localhost:3000/api/v1/centers/getCentersByCat?cat=${cat}`;
+    }
 
-
-    fetch(`http://localhost:3000/api/v1/centers/getCentersByCat?cat=${s}`, requestOptions  )
+    fetch(url, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         setProducts(result);
@@ -31,14 +36,15 @@ console.log(s)
       .catch((error) => console.log("error", error));
   };
   useEffect(() => {
-    getData();
-  }, [search]);
+    getData(selectedCategory);
+  }, [selectedCategory, search]);
+
   const handleInputChange = () => {
     setSearch(value);
   };
   return (
     <div>
-     
+      <Categories onCategoryClick={(catId) => setSelectedCategory(catId)} />
       <div className="search-box">
         <button onClick={handleInputChange}>
           <SearchOutlined style={{ paddingLeft: "10px", fontSize: "18px" }} />
@@ -61,13 +67,11 @@ console.log(s)
         </div>
         {products.map((el, i) => (
           <div key={i} style={{ marginBottom: "10px" }}>
-            
-            <a href={`${el.center_id}`}>
+            <Link to={`/page/${el.center_id}`}>
               <div className="imag-item">
                 <img className="backgrond" src={el.cover_img} />
                 <img className="logo" src={el.logo} />
               </div>
-
               <div className="details-item">
                 <span>{el.center_name}</span>
                 <div className="evaluation">
@@ -79,7 +83,7 @@ console.log(s)
                   <FaStar style={{ color: "gold" }} />
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </div>

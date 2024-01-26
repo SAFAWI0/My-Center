@@ -34,7 +34,7 @@ const LoginScreen = () => {
     };
 
     fetch(
-      "https://my-center-api.onrender.com/api/v1/user/login",
+      " http://localhost:3000/api/v1/user/login",
       requestOptions
     )
       .then((response) => response.json())

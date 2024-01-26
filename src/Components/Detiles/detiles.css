@@ -1,70 +1,47 @@
-.contentes{
-    
-    align-items: center;
-    margin-top: 10px;
-
+.detiles .cover {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+}
+.detiles .name {
+  text-align: center;
+  font-family: "Fascinate", system-ui;
+  font-weight: bold;
+}
+.detiles .detils {
+  text-align: center;
+  margin: 40px 0;
+  border: 1px solid #eee;
+  padding: 10px;
+  font-size: 18px;
+}
+.detiles .videobox iframe {
+  width: 100%;
+  height: 300px;
 }
 
-.cover{
-    width: 100%;
-    height: 150px;
-    object-fit:fill;
-
-}
-.name{
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    font-family: 'Fascinate', system-ui;
-    font-size: medium;
-    font-weight: 400;
-    margin-top: 0%;
-
-}
-.contentes .detils{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 25px;
-}
-.videobox{
-    border-radius: 8px;
-    margin: auto;
-    width: 98%;
-    background-color: aqua;
-}
-.discrept{
-    margin-top: 12px;
-    margin-bottom: 12px;
-    display: flex;
-    justify-content: space-evenly;
-}
-.discrept .subdis{
-    
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.discrept .subdis .time{
-    color:#415a77 ;
-    font-size: 0.8em;
-    border: 0.5px solid #415a77;
-    padding: 2px;
-    border-radius: 5px;
-
-}
-.discrept .subdis .num{
-    color:#415a77 ;
-    font-size: 0.8em;
-    border: 0.5px solid #415a77;
-    padding: 2px;
-    border-radius: 5px;
+.detiles .subdis {
+  display: block;
+  margin-top: 20px;
 }
 
+.detiles .subdis .num {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #eee;
+  font-size: 18px;
+}
+.detiles .subdis .num p {
+  font-weight: bold;
+}
 
-
-
-
-.button-8 {
+.detiles .butt {
   touch-action: manipulation;
   appearance: button;
   background-color: transparent;
@@ -79,29 +56,36 @@
   margin-bottom: 15px;
 }
 
-.button-8:focus {
+.butt:focus {
   outline: 0;
 }
 
-.button-8 {
+.butt {
   touch-action: manipulation;
-  background-image: linear-gradient(135deg, color(display-p3 .572549 .415686 1) 0%, color(display-p3 1 .466667 .690196) 50%, color(display-p3 1 .701961 .403922) 100%);
+  background-image: linear-gradient(
+    135deg,
+    color(display-p3 0.572549 0.415686 1) 0%,
+    color(display-p3 1 0.466667 0.690196) 50%,
+    color(display-p3 1 0.701961 0.403922) 100%
+  );
   border-radius: 8px;
   color: #fff;
-  font-feature-settings: "ss01", "cv10", "calt"0, "liga"0;
+  font-feature-settings: "ss01", "cv10", "calt" 0, "liga" 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   padding: 10px 20px;
   position: relative;
-  transition: transform .2s cubic-bezier(.6, .6, 0, 1), margin-top .2s cubic-bezier(.6, .6, 0, 1);
+  transition: transform 0.2s cubic-bezier(0.6, 0.6, 0, 1),
+    margin-top 0.2s cubic-bezier(0.6, 0.6, 0, 1);
   transition-behavior: normal, normal;
 }
 
-.button-8::before {
+.butt::before {
   -webkit-mask-clip: content-box, initial;
   -webkit-mask-composite: xor;
-  -webkit-mask-image: linear-gradient(#fff 0, #fff 0), linear-gradient(#fff 0, #fff 0);
+  -webkit-mask-image: linear-gradient(#fff 0, #fff 0),
+    linear-gradient(#fff 0, #fff 0);
   -webkit-mask-origin: content-box, initial;
   -webkit-mask-position-x: initial, initial;
   -webkit-mask-position-y: initial, initial;
@@ -111,16 +95,16 @@
   padding: 1px;
 }
 
-.button-8::before {
+.butt::before {
   background-color: initial;
-  background-image: linear-gradient(rgba(255, 255, 255, .32), transparent);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.32), transparent);
   bottom: 0;
   pointer-events: none;
   right: 0;
 }
 
-.button-8::after,
-.button-8::before {
+.butt::after,
+.butt::before {
   border-radius: inherit;
   content: "";
   left: 0;
@@ -128,23 +112,43 @@
   top: 0;
 }
 
-.button-8::after {
-  box-shadow: #000019 0 0, rgba(0, 0, 25, .3) 0 9px 21px, rgba(73, 2, 57, .2) 0 -3px inset;
+.butt::after {
+  box-shadow: #000019 0 0, rgba(0, 0, 25, 0.3) 0 9px 21px,
+    rgba(73, 2, 57, 0.2) 0 -3px inset;
   height: 100%;
-  transition: box-shadow .2s cubic-bezier(.6, .6, 0, 1), background-color .2s cubic-bezier(.6, .6, 0, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.6, 0.6, 0, 1),
+    background-color 0.2s cubic-bezier(0.6, 0.6, 0, 1);
   transition-behavior: normal, normal;
   width: 100%;
   z-index: 1;
 }
 
-.button-8:active {
+.butt:active {
   transform: translateY(1.5px);
 }
 
-.button-8:hover::after {
-  background-color: rgba(255, 255, 255, .1);
+.butt:hover::after {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button-8:active::after {
-  box-shadow: #000019 0 0, rgba(0, 0, 25, .2) 0 9px 21px, rgba(73, 2, 57, .2) 0 0 inset;
+.butt:active::after {
+  box-shadow: #000019 0 0, rgba(0, 0, 25, 0.2) 0 9px 21px,
+    rgba(73, 2, 57, 0.2) 0 0 inset;
+}
+
+@media screen and (max-width: 430px) {
+}
+
+@media screen and (max-width: 360px) {
+  .detiles .subdis {
+    display: block;
+  }
+  .detiles .subdis .num {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .detiles .reting {
+    margin: 10px;
+  }
 }

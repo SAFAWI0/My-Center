@@ -25,7 +25,7 @@ export const GridItems = () => {
           {products.map((el, i) => (
             <li key={i}>
               <div className="grid-list-items">
-                <a href={`${el.id}`}>
+                {/* <a href={`${el.id}`}> */}
                   <div className="grid-imag-items">
                     <img className="backgrond" src={el.background} />
                   </div>
@@ -40,7 +40,7 @@ export const GridItems = () => {
                       {el.evaluation}
                     </p> */}
                   </div>
-                </a>
+                {/* </a> */}
               </div>
             </li>
           ))}
