@@ -1,7 +1,7 @@
 import "./loginScreen.css";
 import { useState } from "react";
 import Container from "../../Components/Container/container";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { useAppStore } from "../../store";
 
@@ -134,15 +134,16 @@ const LoginScreen = () => {
                 </button>
               )}
             </div>
+            
             <button onClick={handleLogin}>Logn in</button>
           </div>
         </div>
         <div className="registerPart">
           <p>
             Don't have an account?
-            <a href="Register">
+            <Link to="/register">
               <span> Sign up</span>
-            </a>
+            </Link>
           </p>
         </div>
       </Container>

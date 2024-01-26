@@ -3,7 +3,7 @@ import "./registerScreen.css";
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import Container from "../../Components/Container/container";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
 
 const RegisterScreen = () => {
@@ -51,11 +51,12 @@ const RegisterScreen = () => {
       .then((response) => response.json())
       .then((result) => {
         if (result.success) {
+          //success
           messageApi.open({
             type: "success",
             content: "Registration Successful",
           });
-          navigate("/Login");
+          navigate("/login");
           setLoading(false);
         } else {
           //waring
@@ -144,9 +145,9 @@ const RegisterScreen = () => {
         <div className="loginPart">
           <p>
             Have an account ?
-            <a href="login">
+            <Link to="/login">
               <span> Log in</span>
-            </a>
+            </Link>
           </p>
         </div>
       </Container>

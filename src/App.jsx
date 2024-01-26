@@ -7,6 +7,7 @@ import { Page } from "./page/page";
 import { useAppStore } from "./store";
 import { useEffect, useState } from "react";
 import { Detiles } from "./Components/Detiles/detiles";
+import { UpdateUsers } from "./Components/UpdateUsers/updateUsers";
 
 const ProtectedRoute = ({ comp }) => {
   const { isLogin, setIsLogin } = useAppStore();
@@ -28,11 +29,12 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/Register" element={<RegisterScreen />} />
+        <Route path="/register" element={<RegisterScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/" element={<ProtectedRoute comp={<HomeScreen />} />} />
         <Route path="/page/:id" element={<ProtectedRoute comp={<Page />} />} />
-        <Route path="/Detiles/:id" element={<ProtectedRoute comp={<Detiles />} />} />
+        <Route path="/detiles/:id" element={<ProtectedRoute comp={<Detiles />} />} />
+        <Route path="/updateUsers" element={<ProtectedRoute comp={<UpdateUsers />} />} />
       </Routes>
     </div>
   );

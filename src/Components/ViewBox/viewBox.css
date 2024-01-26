@@ -1,6 +1,3 @@
-.content-categ {
-  margin-top: 18px;
-}
 .Logout {
   position: sticky;
   z-index: 6;
@@ -51,56 +48,6 @@
 .line {
   border-bottom: 1px solid #000;
   margin: 20px 0;
-}
-
-.contentUser .user .update {
-  margin: 20px 30px;
-}
-.contentUser .user .update .end {
-  margin-bottom: 15px;
-}
-.contentUser .user .update .end p {
-  font-size: 18px;
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.contentUser .user .update .end input {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  border-radius: 5px;
-  box-sizing: border-box;
-  text-align: end;
-}
-.contentUser .user .update .end input:focus {
-  outline: 2px solid #000fff;
-  color: #000fff;
-}
-.contentUser .user .update .buttSave {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 40px;
-}
-.contentUser .user .update .buttSave button {
-  border: 1px solid #ccc;
-  color: #000;
-  width: 80px;
-  height: 30px;
-  font-size: 20px;
-  border-radius: 8px;
-  background-color: #eee;
-}
-.contentUser .user .update .buttSave button:hover {
-  background-color: #000fff;
-  color: #fff;
-}
-.contentUser .user .update .buttSave .buttCa:hover {
-  background-color: #a70e16;
-  color: #fff;
 }
 
 @media screen and (max-width: 360px) {
