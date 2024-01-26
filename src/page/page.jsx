@@ -22,7 +22,7 @@ export const Page = () => {
     };
 
     fetch(
-      `http://localhost:3000/api/v1/centers/getCentersById/${id}`,
+      `https://my-center-api.onrender.com/api/v1/centers/getCentersById/${id}`,
       requestOptions
     )
       .then((response) => response.json())

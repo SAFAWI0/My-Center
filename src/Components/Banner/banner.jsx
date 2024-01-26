@@ -22,7 +22,7 @@ const BannerSlider = () => {
       method: "GET",
     };
 
-    fetch("http://localhost:3000/api/v1/advertisements/show", requestOptions)
+    fetch("https://my-center-api.onrender.com/api/v1/advertisements/show", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         setValue(result);

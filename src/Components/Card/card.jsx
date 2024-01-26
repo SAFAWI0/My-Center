@@ -21,11 +21,11 @@ export const Card = () => {
       method: "GET",
     };
 
-    let url = "http://localhost:3000/api/v1/centers/show";
+    let url = "https://my-center-api.onrender.com/api/v1/centers/show";
     if (search) {
-      url = `http://localhost:3000/api/v1/centers/show?search=${search}`;
+      url = `https://my-center-api.onrender.com/api/v1/centers/show?search=${search}`;
     } else if (cat) {
-      url = `http://localhost:3000/api/v1/centers/getCentersByCat?cat=${cat}`;
+      url = `https://my-center-api.onrender.com/api/v1/centers/getCentersByCat?cat=${cat}`;
     }
 
     fetch(url, requestOptions)

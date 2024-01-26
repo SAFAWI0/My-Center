@@ -81,7 +81,7 @@ export const ViewBox = () => {
       body: raw,
     };
   
-    fetch(`http://localhost:3000/api/v1/user/update/${userInfo.user_id}`, requestOptions)
+    fetch(`https://my-center-api.onrender.com/api/v1/user/update/${userInfo.user_id}`, requestOptions)
     .then(response => response.json())
     Swal.fire({
       title: "هل متأكد من الحفظ",
