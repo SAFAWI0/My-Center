@@ -42,7 +42,7 @@
   font-weight: bold;
   border: 1px solid #eee;
   border-radius: 50%;
-  width: 20px;
+  width:15%;
   text-align: center;
 }
 .detile p {
@@ -73,6 +73,11 @@
   background-color: #eee;
   border-radius: 10px;
   padding: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #000;
 }
 .Sessioncard .card .title .price span {
   font-weight: bold;
