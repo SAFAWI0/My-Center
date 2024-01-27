@@ -57,7 +57,7 @@ export const Page = () => {
                     <span>{el.phone}</span>
                   </div>
                   <div className="eval">
-                    <FaStar style={{ color: "gold" }} />
+                    <FaStar style={{ color: "gold", marginBottom: "2px" }} />
                     <p>
                       تقييم المركز: <b> {el.evaluation}</b>
                     </p>
@@ -74,12 +74,13 @@ export const Page = () => {
                     <FaMapMarkerAlt className="icon" />
                   </div>
                   <div className="work-time">
-                    <p className="title"> {el.work_time} </p>
                     <div className="day">
                       <p>:أوقات دوام المركز</p>
                       <FaRegCalendarDays className="icon" />
                     </div>
+                    <p className="title"> {el.work_time} </p>
                   </div>
+                  
                 </div>
               </div>
             </div>

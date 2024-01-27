@@ -72,8 +72,8 @@
 
 .page-content .details .work-time {
   margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
+  display: block;
+  text-align: center;
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 8px;
@@ -81,8 +81,10 @@
 }
 .page-content .details .work-time .day {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 .page-content .details .work-time .title {
   font-weight: bold;

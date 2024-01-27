@@ -75,8 +75,8 @@ export const Card = () => {
               <div className="details-item">
                 <span>{el.center_name}</span>
                 <div className="evaluation">
-                  <p> {el.details}</p>
-                  <SlActionUndo style={{ color: "#666", marginRight: "6px" }} />
+                  <p className="textDet"> {el.details}</p>
+                  <SlActionUndo style={{ color: "#666", marginRight: "6px",marginTop:"5px" }} />
                 </div>
                 <div className="evaluation">
                   <p>{el.evaluation}</p>
