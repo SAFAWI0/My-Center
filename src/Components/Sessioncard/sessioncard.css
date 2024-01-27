@@ -83,3 +83,14 @@
 .Sessioncard .card .title .price span {
   font-weight: bold;
 }
+@media screen and (max-width: 430px) {
+  .Sessioncard .card .title {
+    top: -35px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .Sessioncard .card .title {
+    top: -35px;
+  }
+}
