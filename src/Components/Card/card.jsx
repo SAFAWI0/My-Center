@@ -87,6 +87,7 @@ export const Card = () => {
           </div>
         ))}
       </div>
+      <div style={{marginBottom:"100px"}}/>
     </div>
   );
 };

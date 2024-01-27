@@ -37,11 +37,12 @@ export const Categories = ({ onCategoryClick }) => {
                 onClick={() => onCategoryClick(el.cat_id)}
               >
                 <img src={el.img} />
-                <h1>{el.name}</h1>
+                <p>{el.name}</p>
               </div>
             </li>
           ))}
         </ul>
+        <div className="line" />
       </div>
     </div>
   );

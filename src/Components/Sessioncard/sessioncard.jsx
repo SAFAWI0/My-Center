@@ -30,7 +30,7 @@ export const Sessioncard = () => {
           </div>
 
           <div className="price">
-            <span>10,000$</span>
+            <span>{Number(10000).toLocaleString("en")}$</span>
             <p>: السعر </p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export const Sessioncard = () => {
           </div>
 
           <div className="price">
-            <span>10,000$</span>
+            <span>{Number(10000).toLocaleString("en")}$</span>
             <p>: السعر </p>
           </div>
         </div>

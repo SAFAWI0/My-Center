@@ -97,4 +97,6 @@ align-items: center;
   width: 100%;
   background-color: #f6f6f6;
   font-size: 18px;
+  text-align: end;
+  padding-right: 10px;
 }

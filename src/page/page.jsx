@@ -10,7 +10,6 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import Map from "../Components/map/map";
 import { useEffect, useState } from "react";
 
-//AIzaSyDvkL52hVjmqVc8kIIE3yLMHC-sf9Lsw6w
 export const Page = () => {
   const { id } = useParams();
   const [value, setValue] = useState([]);
@@ -69,8 +68,6 @@ export const Page = () => {
                 </div>
 
                 <div className="content-center">
-                 
-
                   <Map />
                   <div className="map-container">
                     <p> {el.write_website}</p>

@@ -10,6 +10,7 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 
 export const UpdateUsers = () => {
+  
   const [passwordFieldEmpty, setPasswordFieldEmpty] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
@@ -49,6 +50,13 @@ export const UpdateUsers = () => {
   }, [inf]);
 
   const handleUpdate = async () => {
+    if (!name || !phone || !email || !password) {
+      messageApi.open({
+        type: "warning",
+        content: "Please fill in all fields",
+      });
+      return;
+    }
     const result = await Swal.fire({
       title: "هل متأكد من الحفظ",
       text: "!تحتاج الى تسجيل الدخول من جديد ",

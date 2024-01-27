@@ -4,7 +4,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .page-content .image .content p {
-  margin-top: 24px;
+  margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
 }
@@ -63,11 +63,10 @@
 }
 .page-content .details .description {
   margin-top: 40px;
-  padding: 15px;
+  padding: 10px;
   text-align: end;
   border: 1px solid #ccc;
-
-  border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 24px;
   font-size: 18px;
 }
 
@@ -95,7 +94,6 @@
   align-items: center;
   gap: 10px;
   border: 1px solid #ccc;
-
   border-radius: 8px;
   padding: 10px;
 }
@@ -103,7 +101,6 @@
   .page-content .image .background {
     height: 250px;
   }
-
   .page-content .image .content .logo {
     width: 120px;
     height: 120px;
@@ -114,5 +111,8 @@
   .page-content .image .content .logo {
     width: 100px;
     height: 100px;
+  }
+  .page-content .image .content p {
+    font-size: 18px;
   }
 }

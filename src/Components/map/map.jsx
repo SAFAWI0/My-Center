@@ -1,7 +1,7 @@
 import "./map.css";
 import React, { useEffect, useState } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-
+//AIzaSyDvkL52hVjmqVc8kIIE3yLMHC-sf9Lsw6w
 const Map = () => {
   const mapRef = React.useRef(null);
   // const [coordinates, setCoordinates] = useState({ lat: 33.31525, lng: 44.37535 });
