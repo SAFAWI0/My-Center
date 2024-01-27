@@ -29,7 +29,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 100%, transparent);
   width: 130px;
   position: relative;
-  top: -40px;
+  top: -50px;
   left: 10px;
 }
 
@@ -82,11 +82,11 @@
 .Sessioncard .card .title .price span {
   font-weight: bold;
 }
+
 @media screen and (max-width: 430px) {
-  .detile {
-    gap: 4px;
-  }
+
 }
 
 @media screen and (max-width: 360px) {
+ 
 }
