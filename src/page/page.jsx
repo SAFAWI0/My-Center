@@ -27,7 +27,6 @@ export const Page = () => {
       .then((response) => response.json())
       .then((result) => {
         setValue(result);
-        console.log(value);
       })
       .catch((error) => console.log("error", error));
   };
@@ -68,7 +67,7 @@ export const Page = () => {
                 </div>
 
                 <div className="content-center">
-                  <Map />
+                
                   <div className="map-container">
                     <p> {el.write_website}</p>
                     <FaMapMarkerAlt className="icon" />

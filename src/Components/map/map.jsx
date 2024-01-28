@@ -1,59 +1,22 @@
 import "./map.css";
-import React, { useEffect, useState } from "react";
-import { Loader } from "@googlemaps/js-api-loader";
-//AIzaSyDvkL52hVjmqVc8kIIE3yLMHC-sf9Lsw6w
+import { useState } from "react";
+
 const Map = () => {
-  const mapRef = React.useRef(null);
-  // const [coordinates, setCoordinates] = useState({ lat: 33.31525, lng: 44.37535 });
-  useEffect(() => {
-    const initMap = async () => {
-      const loader = new Loader({
-        apiKey: "AIzaSyDvkL52hVjmqVc8kIIE3yLMHC-sf9Lsw6w", // قم بتعيين مفتاح API الخاص بك هنا
-        version: "weekly", // يمكنك تحديد إصدار محدد إذا كنت ترغب
-      });
+  // قيم الإحداثيات يتم تعيينها يدويًا
+  const [coordinates] = useState({ lat: 33.123, lng: 44.567 });
 
-      loader.load().then(() => {
-        // إعداد الخريطة بعد تحميل ال API
-        const map = new window.google.maps.Map(mapRef.current, {
-          center: { lat: 33.31525, lng: 44.37535 }, // تحديد الموقع الابتدائي للخريطة
-          zoom: 12, // تحديد التكبير الابتدائي
-          disableDefaultUI: true,
-          
-            // يمكنك إضافة المزيد من الأنماط حسب احتياجاتك
-            styles: [
-              {
-                featureType: "all",
-                elementType: "all",
-                stylers: [
-                  { saturation: -100 },
-                  { lightness: 100 },
-                ],
-              },
-              {
-                featureType: "water",
-                elementType: "geometry",
-                stylers: [
-                  { color: "red" },
-                ],
-              },
-              {
-                featureType: "landscape",
-                elementType: "geometry",
-                stylers: [
-                  { color: "#111" },
-                ],
-              },
-            ],
-          });
-
-       
-      });
-    };
-
-    initMap();
-  }, []);
-
-  return <div className="map" ref={mapRef}></div>;
+  return (
+    <div className="map">
+      <iframe
+        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...&ll=${coordinates.lat},${coordinates.lng}`}
+        width="100%"
+        height="250px"
+        style={{ border: 0 }}
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  );
 };
 
 export default Map;

@@ -75,7 +75,7 @@ align-items: center;
   gap: 6px;
 }
 .search-box {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   border: 1px solid #ccc;
   background-color: #f6f6f6;
