@@ -41,6 +41,27 @@
   font-weight: bold;
 }
 
+.modal p {
+  margin-top: 10px;
+}
+
+.modal {
+  font-size: 18px;
+  text-align: end;
+  margin-right: 40px;
+}
+.modal input {
+  width: 400px;
+  height: 24px;
+  padding: 8px;
+  border-radius: 18px;
+  text-align: end;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border: none;
+  border: 2px solid #ccc;
+}
+
 .detiles .butt {
   touch-action: manipulation;
   appearance: button;
