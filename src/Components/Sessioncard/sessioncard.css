@@ -22,6 +22,8 @@
 
 .detile {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   color: #eee;
   border-radius: 8px;
