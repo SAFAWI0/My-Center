@@ -75,18 +75,11 @@ export const Card = () => {
                 <img className="backgrond" src={el.cover_img} />
                 <img className="logo" src={el.logo} />
               </div>
+
               <div className="details-item">
                 <span>{el.center_name}</span>
-                <div className="evaluation">
-                  <p className="textDet"> {el.details}</p>
-                  <SlActionUndo
-                    style={{
-                      color: "#666",
-                      marginRight: "6px",
-                      marginTop: "5px",
-                    }}
-                  />
-                </div>
+                <p> {el.details}</p>
+
                 <div className="evaluation">
                   <p>{el.evaluation}</p>
                   <FaStar style={{ color: "gold" }} />
