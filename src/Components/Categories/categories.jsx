@@ -2,6 +2,7 @@ import "./categories.css";
 import { cate } from "../../fake";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useAppStore } from "../../store";
 
 export const Categories = ({ onCategoryClick }) => {
   const [value, setValue] = useState([]);

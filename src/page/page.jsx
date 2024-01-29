@@ -7,7 +7,6 @@ import Header from "../Components/Header/header";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaRegCalendarDays } from "react-icons/fa6";
-import Map from "../Components/map/map";
 import { useEffect, useState } from "react";
 
 export const Page = () => {
@@ -67,7 +66,6 @@ export const Page = () => {
                 </div>
 
                 <div className="content-center">
-                
                   <div className="map-container">
                     <p> {el.write_website}</p>
                     <FaMapMarkerAlt className="icon" />
@@ -79,7 +77,6 @@ export const Page = () => {
                     </div>
                     <p className="title"> {el.work_time} </p>
                   </div>
-                  
                 </div>
               </div>
             </div>

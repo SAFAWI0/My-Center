@@ -5,8 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { images } from "../../fake";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useAppStore } from "../../store";
 const BannerSlider = () => {
   const [value, setValue] = useState([]);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -22,7 +24,10 @@ const BannerSlider = () => {
       method: "GET",
     };
 
-    fetch("https://my-center-api.onrender.com/api/v1/advertisements/show", requestOptions)
+    fetch(
+      "https://my-center-api.onrender.com/api/v1/advertisements/show",
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         setValue(result);

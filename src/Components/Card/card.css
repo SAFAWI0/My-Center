@@ -100,6 +100,7 @@ align-items: center;
   text-align: end;
   padding-right: 10px;
 }
+
 @media screen and (max-width: 430px) {
   .list-item .details-item .evaluation .textDet {
     margin-top: 20px;

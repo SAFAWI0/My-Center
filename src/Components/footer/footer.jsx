@@ -3,6 +3,7 @@ import Container from "../Container/container";
 import imag1 from "../../assets/facebook.png";
 import imag2 from "../../assets/instagram.png";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -14,19 +15,19 @@ export const Footer = () => {
           </div>
           <ul>
             <li>
-              <a href="https://www.facebook.com/earthlinktele/?locale=ar_AR">
+              <Link to="https://www.facebook.com/earthlinktele/?locale=ar_AR">
                 <img src={imag1} alt="imageIcon" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.instagram.com/aon.iq?igsh=MXh2ZXNiM2Y3NGg4bA==">
+              <Link to="https://www.instagram.com/aon.iq?igsh=MXh2ZXNiM2Y3NGg4bA==">
                 <img src={imag2} alt="imageIcon" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://twitter.com/EarthlinkTele">
+              <Link to="https://twitter.com/EarthlinkTele">
                 <FaXTwitter />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

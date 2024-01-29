@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { SearchOutlined } from "@ant-design/icons";
 import { Categories } from "../Categories/categories";
 import { Link } from "react-router-dom";
+import { useAppStore } from "../../store";
 // import { useAppStore } from "../../store";
 
 export const Card = () => {
@@ -14,6 +15,7 @@ export const Card = () => {
   const [search, setSearch] = useState("");
   const [value, setValue] = useState();
   const [selectedCategory, setSelectedCategory] = useState(null);
+
   // const { s } = useAppStore();
   // console.log(s)
   const getData = (cat) => {
@@ -60,6 +62,7 @@ export const Card = () => {
           }}
         />
       </div>
+
       <div className="list-item">
         <div className="title">
           <HiMiniScissors style={{ marginBottom: "12px" }} />
@@ -76,7 +79,13 @@ export const Card = () => {
                 <span>{el.center_name}</span>
                 <div className="evaluation">
                   <p className="textDet"> {el.details}</p>
-                  <SlActionUndo style={{ color: "#666", marginRight: "6px",marginTop:"5px" }} />
+                  <SlActionUndo
+                    style={{
+                      color: "#666",
+                      marginRight: "6px",
+                      marginTop: "5px",
+                    }}
+                  />
                 </div>
                 <div className="evaluation">
                   <p>{el.evaluation}</p>
@@ -87,7 +96,7 @@ export const Card = () => {
           </div>
         ))}
       </div>
-      <div style={{marginBottom:"100px"}}/>
+      <div style={{ marginBottom: "100px" }} />
     </div>
   );
 };
