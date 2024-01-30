@@ -46,7 +46,6 @@ export const Page = () => {
                   <img className="logo" src={el.logo} />
                   <p>{el.center_name}</p>
                 </div>
-                <h1>aafdg</h1>
               </div>
               <div className="line" />
               <div className="details">
