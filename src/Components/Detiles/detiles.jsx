@@ -16,6 +16,13 @@ export const Detiles = () => {
   const [phone, setPhone] = useState("");
 
   const handleOk = () => {
+    if (!name || !phone) {
+      messageApi.open({
+        type: "warning",
+        content: "ادخل اسمك و رقم الهاتف",
+      });
+      return;
+    }
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
