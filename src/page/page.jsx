@@ -20,7 +20,7 @@ export const Page = () => {
     };
 
     fetch(
-      `http://localhost:3000/api/v1/centers/getCentersById/${id}`,
+      `https://my-center-api.onrender.com/api/v1/centers/getCentersById/${id}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -46,6 +46,7 @@ export const Page = () => {
                   <img className="logo" src={el.logo} />
                   <p>{el.center_name}</p>
                 </div>
+                <h1>aafdg</h1>
               </div>
               <div className="line" />
               <div className="details">
