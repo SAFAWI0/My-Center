@@ -95,13 +95,13 @@ export const Detiles = () => {
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="الاسم الثلاثي الكامل"
+              placeholder=""
             />
             <p> رقم الهاتف</p>
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="رقم الهاتف"
+              placeholder=" "
             />
           </div>
         </Modal>
