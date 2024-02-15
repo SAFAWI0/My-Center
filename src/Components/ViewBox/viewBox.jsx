@@ -18,14 +18,11 @@ export const ViewBox = () => {
   });
 
   useEffect(() => {
-    // تحقق من المعلومات المخزنة في localStorage
     const storedUserInfo = localStorage.getItem("userInfo");
     if (storedUserInfo) {
       const parsedUserInfo = JSON.parse(storedUserInfo);
       setUserInfo(parsedUserInfo);
     }
-
-    // عندما تحدث أي تغيير في inf، قم بتحديث المعلومات في localStorage
     if (inf.length > 0) {
       const user = inf[0];
       setUserInfo({

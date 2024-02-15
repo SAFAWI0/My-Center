@@ -1,6 +1,6 @@
 import "./updateUsers.css";
 import { useAppStore } from "../../store";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { message } from "antd";
 import Swal from "sweetalert2";
@@ -10,7 +10,6 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 
 export const UpdateUsers = () => {
-  
   const [passwordFieldEmpty, setPasswordFieldEmpty] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
@@ -29,14 +28,11 @@ export const UpdateUsers = () => {
   });
 
   useEffect(() => {
-    // تحقق من المعلومات المخزنة في localStorage
     const storedUserInfo = localStorage.getItem("userInfo");
     if (storedUserInfo) {
       const parsedUserInfo = JSON.parse(storedUserInfo);
       setUserInfo(parsedUserInfo);
     }
-
-    // عندما تحدث أي تغيير في inf، قم بتحديث المعلومات في localStorage
     if (inf.length > 0) {
       const user = inf[0];
       setUserInfo({

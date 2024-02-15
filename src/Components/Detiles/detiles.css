@@ -1,7 +1,13 @@
 .detiles .cover {
-  width: 100%;
-  height: 200px;
-  object-fit: fill;
+  width: 250px;
+  height: 150px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+.detiles .name-imag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .detiles .name {
   text-align: center;

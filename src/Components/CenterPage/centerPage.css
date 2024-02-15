@@ -99,6 +99,10 @@
   border-radius: 8px;
   padding: 10px;
 }
+.map {
+  border: 1px solid #000;
+  margin-top: 10px;
+}
 @media screen and (max-width: 430px) {
   .page-content .image .background {
     height: 250px;

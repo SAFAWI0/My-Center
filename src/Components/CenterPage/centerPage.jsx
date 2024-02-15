@@ -1,24 +1,27 @@
-import "./page.css";
+import "./centerPage.css";
 import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-import Container from "../Components/Container/container";
-import { Sessioncard } from "../Components/Sessioncard/sessioncard";
-import Header from "../Components/Header/header";
+import Container from "../Container/container";
+import { Sessioncard } from "../Sessioncard/sessioncard";
+import Header from "../Header/header";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import { useEffect, useState } from "react";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
-export const Page = () => {
+export const CenterPage = () => {
   const { id } = useParams();
   const [value, setValue] = useState([]);
+  const [lat, setLat] = useState([]);
+  const [lng, setLng] = useState([]);
 
   const getData = () => {
     var requestOptions = {
       method: "GET",
       redirect: "follow",
     };
-
     fetch(
       `https://my-center-api.onrender.com/api/v1/centers/getCentersById/${id}`,
       requestOptions
@@ -26,6 +29,11 @@ export const Page = () => {
       .then((response) => response.json())
       .then((result) => {
         setValue(result);
+
+        if (result.length > 0) {
+          setLat(result[0].lat);
+          setLng(result[0].lng);
+        }
       })
       .catch((error) => console.log("error", error));
   };
@@ -65,6 +73,17 @@ export const Page = () => {
                   <p>{el.details}</p>
                 </div>
 
+                <div className="map">
+                  <MapContainer
+                    style={{ width: "100%", height: "200px" }}
+                    center={[lat, lng]}
+                    zoom={15}
+                  >
+                    <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                    <Marker position={[lat, lng]} />
+                  </MapContainer>
+                </div>
+
                 <div className="content-center">
                   <div className="map-container">
                     <p> {el.write_website}</p>
@@ -79,11 +98,11 @@ export const Page = () => {
                   </div>
                 </div>
               </div>
+              <div className="line" />
+              <Sessioncard id={el.center_id} />
             </div>
           ))}
         </div>
-        <div className="line" />
-        <Sessioncard />
       </Container>
     </div>
   );

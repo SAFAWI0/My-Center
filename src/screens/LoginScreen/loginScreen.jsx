@@ -20,8 +20,6 @@ const LoginScreen = () => {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      // name: inputValue && inputValue.includes('@') ? '' : inputValue,
-      // email: inputValue && inputValue.includes('@') ? inputValue : '',
       email: inputValue,
       password,
     });
@@ -75,7 +73,10 @@ const LoginScreen = () => {
       body: rawD,
     };
 
-    fetch("https://my-center-api.onrender.com/api/v1/user/filter", requestOptionsD)
+    fetch(
+      "https://my-center-api.onrender.com/api/v1/user/filter",
+      requestOptionsD
+    )
       .then((response) => response.json())
       .then((result) => {
         setInf(result);
@@ -134,7 +135,7 @@ const LoginScreen = () => {
                 </button>
               )}
             </div>
-            
+
             <button onClick={handleLogin}>Logn in</button>
           </div>
         </div>

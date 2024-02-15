@@ -1,12 +1,9 @@
 import "./detiles.css";
-import { FaStar } from "react-icons/fa";
-import cover from "../../assets/barbie.jpg";
 import { useParams } from "react-router-dom";
 import Container from "../Container/container";
 import Header from "../Header/header";
-import { detiles } from "../../fake";
 import { Modal, message } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Detiles = () => {
   const { id } = useParams();
@@ -14,6 +11,7 @@ export const Detiles = () => {
   const [messageApi, contextHolder] = message.useMessage();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [value, setValue] = useState([]);
 
   const handleOk = () => {
     if (!name || !phone) {
@@ -27,7 +25,7 @@ export const Detiles = () => {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      items: { detiles },
+      items: { value },
       phone,
       name,
     });
@@ -39,7 +37,10 @@ export const Detiles = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:3000/api/v1/orders/add", requestOptions)
+    fetch(
+      "https://my-center-api.onrender.com/api/v1/orders/add",
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
@@ -60,21 +61,42 @@ export const Detiles = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  const getData = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch(
+      `https://my-center-api.onrender.com/api/v1/sessions/show/${id}`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => setValue(result))
+      .catch((error) => console.error(error));
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div>
       <Header />
       <Container>
-        {detiles.map((el, i) => (
+        {value.map((el, i) => (
           <div key={i} className="detiles">
-            <img src={el.img} className="cover" />
-            <h3 className="name">ابتسامة هوليود</h3>
+            <div className="name-imag">
+              <img src={el.img} className="cover" />
+              <h3 className="name">{el.ses_name} </h3>
+            </div>
             <div className="subdis">
               <div className="num">
-                <p>{el.time}</p>
+                <p>{el.session_time}</p>
                 <span>: الوقت الجلسة</span>
               </div>
               <div className="num">
-                <p>{el.numSs}</p>
+                <p>{el.nu_ssession}</p>
                 <span> : عدد الجلسات</span>
               </div>
               <div className="num">
@@ -82,7 +104,7 @@ export const Detiles = () => {
                 <span> : السعر</span>
               </div>
             </div>
-            <p className="detils">{el.description}</p>
+            <p className="detils">{el.details}</p>
             <div className="videobox">
               <iframe src={el.video} title="YouTube video player"></iframe>
             </div>

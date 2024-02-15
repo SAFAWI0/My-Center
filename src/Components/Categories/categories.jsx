@@ -1,10 +1,9 @@
 import "./categories.css";
-import { cate } from "../../fake";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useAppStore } from "../../store";
+import { Link } from "react-router-dom";
 
-export const Categories = ({ onCategoryClick }) => {
+export const Categories = () => {
   const [value, setValue] = useState([]);
 
   const getData = () => {
@@ -33,13 +32,12 @@ export const Categories = ({ onCategoryClick }) => {
         <ul>
           {value.map((el, i) => (
             <li key={i}>
-              <div
-                className="category-item"
-                onClick={() => onCategoryClick(el.cat_id)}
-              >
-                <img src={el.img} />
-                <p>{el.name}</p>
-              </div>
+              <Link to={`/categoriesPage/${el.cat_id}`}>
+                <div className="category-item">
+                  <img src={el.img} />
+                  <p>{el.name}</p>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>

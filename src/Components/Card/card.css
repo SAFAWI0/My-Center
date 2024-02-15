@@ -18,6 +18,13 @@
   margin-bottom: 12px;
   font-family: "Lalezar";
 }
+.list-item .content .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #000fff;
+}
 
 .list-item .details-item {
   text-align: end;
@@ -54,31 +61,4 @@
   position: relative;
   margin-top: -80px;
   margin-left: 20px;
-}
-
-.search-box {
-  margin-top: 20px;
-  display: flex;
-  border: 1px solid #ccc;
-  background-color: #f6f6f6;
-  border-radius: 12px;
-  overflow: hidden;
-  align-items: center;
-  height: 48px;
-  width: 100%;
-}
-.search-box button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin-right: 10px;
-}
-.search-box input {
-  outline: none;
-  border: none;
-  width: 100%;
-  background-color: #f6f6f6;
-  font-size: 18px;
-  text-align: end;
-  padding-right: 10px;
 }

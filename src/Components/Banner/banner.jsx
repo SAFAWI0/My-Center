@@ -2,10 +2,9 @@ import "./banner.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { images } from "../../fake";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useAppStore } from "../../store";
+
 const BannerSlider = () => {
   const [value, setValue] = useState([]);
 
@@ -15,8 +14,8 @@ const BannerSlider = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // تفعيل التشغيل التلقائي
-    autoplaySpeed: 5000, // فترة التأخير بين الصور بالميللي ثانية (هنا5 ثوانٍ)
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
 
   const getData = () => {
