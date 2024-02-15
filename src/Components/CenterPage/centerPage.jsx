@@ -10,12 +10,19 @@ import { FaRegCalendarDays } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import { Icon } from "leaflet";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
 export const CenterPage = () => {
   const { id } = useParams();
   const [value, setValue] = useState([]);
   const [lat, setLat] = useState([]);
   const [lng, setLng] = useState([]);
+
+  const customMarkerIcon = new Icon({
+    iconUrl: markerIconPng,
+    iconSize: [25, 41],
+  });
 
   const getData = () => {
     var requestOptions = {
@@ -80,7 +87,7 @@ export const CenterPage = () => {
                     zoom={15}
                   >
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                    <Marker position={[lat, lng]} />
+                    <Marker position={[lat, lng]} icon={customMarkerIcon} />
                   </MapContainer>
                 </div>
 
