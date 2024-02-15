@@ -11,7 +11,7 @@ export const Footer = () => {
       <Container>
         <div className="content">
           <div className="title">
-            <span>All Rights Reserved By - Aon 2023</span>
+            <p>By - Aon 2023 </p>
           </div>
           <ul>
             <li>
