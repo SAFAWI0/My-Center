@@ -2,7 +2,8 @@
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  margin-bottom: 8px;
 }
 .grid-more .grid-content a {
   display: flex;
@@ -12,7 +13,7 @@
   text-decoration: none;
   color: #000fff;
 }
-.grid-more .grid-content span {
+.grid-more .grid-content .grid-description span {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -20,9 +21,6 @@
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 4px;
-}
-.grid-description {
-  margin-bottom: 8px;
 }
 .grid-list-items a {
   text-decoration: none;
