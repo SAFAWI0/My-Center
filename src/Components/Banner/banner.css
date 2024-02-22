@@ -12,3 +12,22 @@
   height: 200px;
   /* object-fit: cover; */
 }
+@media screen and (max-width: 430px) {
+  .app-banner {
+    height: 150px;
+  }
+
+  .app-banner img {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .app-banner {
+    height: 150px;
+  }
+
+  .app-banner img {
+    height: 150px;
+  }
+}
