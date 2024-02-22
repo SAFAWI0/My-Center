@@ -40,6 +40,7 @@ export const ViewBox = () => {
     navigate("/login");
     localStorage.removeItem("Token");
     localStorage.removeItem("userInfo");
+    localStorage.removeItem("cart");
     setOpen(false);
   };
 
