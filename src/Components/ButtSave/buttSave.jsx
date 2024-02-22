@@ -2,38 +2,42 @@ import "./buttSave.css";
 import { BsBookmarkDash } from "react-icons/bs";
 import { BsBookmarkCheckFill } from "react-icons/bs";
 import { useAppStore } from "../../store";
+import { useEffect } from "react";
 
 export const ButtSave = ({ center }) => {
   const { cart, setCart } = useAppStore();
 
-  let qt =
-    cart.find((el) => el.product.center_id === center.center_id)?.qt || 0;
+  let isCenterInCart = cart.find(
+    (el) => el.product.center_id === center.center_id
+  );
 
-  const handleChange = (newQt) => {
-    if (newQt === 0) {
-      setCart(cart.filter((el) => el.product.center_id !== center.center_id));
+  const handleChange = () => {
+    let updatedCart = [...cart];
+    const index = updatedCart.findIndex(
+      (el) => el.product.center_id === center.center_id
+    );
+    if (index !== -1) {
+      updatedCart.splice(index, 1); // remove the center if it already exists
     } else {
-      let newItem = {
-        product: center,
-        qt: newQt,
-      };
-      let index = cart.findIndex(
-        (el) => el?.product?.center_id === center?.center_id
-      );
-      if (index === -1) {
-        setCart([...cart, newItem]);
-      }
+      updatedCart.push({ product: center }); // add the center if it doesn't exist
     }
+    setCart(updatedCart); // update the cart state
+    localStorage.setItem("cart", JSON.stringify(updatedCart)); // update localStorage
   };
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      setCart(JSON.parse(storedCart));
+    }
+  }, []);
+
   return (
     <div>
-      {qt === 0 ? (
-        <BsBookmarkDash className="iconAdd" onClick={() => handleChange(1)} />
+      {isCenterInCart ? (
+        <BsBookmarkCheckFill className="iconAdd" onClick={handleChange} />
       ) : (
-        <BsBookmarkCheckFill
-          className="iconAdd"
-          onClick={() => handleChange(qt - 1)}
-        />
+        <BsBookmarkDash className="iconAdd" onClick={handleChange} />
       )}
     </div>
   );

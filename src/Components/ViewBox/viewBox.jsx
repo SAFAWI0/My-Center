@@ -5,7 +5,6 @@ import { FaUserCircle } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { BiSupport } from "react-icons/bi";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 export const ViewBox = () => {
