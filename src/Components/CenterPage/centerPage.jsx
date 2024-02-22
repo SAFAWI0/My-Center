@@ -12,6 +12,7 @@ import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import { ButtSave } from "../ButtSave/buttSave";
 
 export const CenterPage = () => {
   const { id } = useParams();
@@ -66,9 +67,10 @@ export const CenterPage = () => {
               <div className="details">
                 <div className="content" style={{ height: "0" }}>
                   <div className="phone">
-                    <FaPhoneVolume className="icon" />
+                    <FaPhoneVolume className="iconPh" />
                     <span>{el.phone}</span>
                   </div>
+                  <ButtSave center={el} />
                   <div className="eval">
                     <FaStar style={{ color: "gold", marginBottom: "2px" }} />
                     <p>
@@ -79,7 +81,6 @@ export const CenterPage = () => {
                 <div className="description">
                   <p>{el.details}</p>
                 </div>
-
                 <div className="map">
                   <MapContainer
                     style={{ width: "100%", height: "200px" }}
@@ -90,7 +91,6 @@ export const CenterPage = () => {
                     <Marker position={[lat, lng]} icon={customMarkerIcon} />
                   </MapContainer>
                 </div>
-
                 <div className="content-center">
                   <div className="map-container">
                     <p> {el.write_website}</p>

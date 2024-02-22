@@ -1,0 +1,17 @@
+.iconDelete {
+  cursor: pointer;
+  font-size: 32px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+}
+.iconDelete :hover {
+  color: #ff0000;
+}
+.iconAdd {
+  font-size: 24px;
+  cursor: pointer;
+}
+.iconAdd:hover {
+  color: #868282;
+}

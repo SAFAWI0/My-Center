@@ -10,6 +10,7 @@ import { UpdateUsers } from "./Components/UpdateUsers/updateUsers";
 import { Centers } from "./Components/Centers/centers";
 import { CenterPage } from "./Components/CenterPage/centerPage";
 import { CategoriesPage } from "./Components/CategoriesPage/categoriesPage";
+import { FavoritePage } from "./Components/Favorites/favoritePage";
 
 const ProtectedRoute = ({ comp }) => {
   const { isLogin, setIsLogin } = useAppStore();
@@ -34,11 +35,30 @@ function App() {
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/" element={<ProtectedRoute comp={<HomeScreen />} />} />
-        <Route path="/page/:id" element={<ProtectedRoute comp={<CenterPage />} />}/>
-        <Route path="/detiles/:id" element={<ProtectedRoute comp={<Detiles />} />}/>
-        <Route path="/categoriesPage/:id" element={<ProtectedRoute comp={<CategoriesPage />} />}/>
-        <Route path="/updateUsers" element={<ProtectedRoute comp={<UpdateUsers />} />}/>
-        <Route   path="/centers" element={<ProtectedRoute comp={<Centers />} />}   />
+        <Route
+          path="/page/:id"
+          element={<ProtectedRoute comp={<CenterPage />} />}
+        />
+        <Route
+          path="/detiles/:id"
+          element={<ProtectedRoute comp={<Detiles />} />}
+        />
+        <Route
+          path="/categoriesPage/:id"
+          element={<ProtectedRoute comp={<CategoriesPage />} />}
+        />
+        <Route
+          path="/updateUsers"
+          element={<ProtectedRoute comp={<UpdateUsers />} />}
+        />
+        <Route
+          path="/centers"
+          element={<ProtectedRoute comp={<Centers />} />}
+        />
+        <Route
+          path="/favoritePage"
+          element={<ProtectedRoute comp={<FavoritePage />} />}
+        />
       </Routes>
     </div>
   );

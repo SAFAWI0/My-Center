@@ -5,6 +5,8 @@ import { FaUserCircle } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { BiSupport } from "react-icons/bi";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 export const ViewBox = () => {
   const { isOpen, setOpen, inf } = useAppStore();
@@ -64,7 +66,15 @@ export const ViewBox = () => {
           </div>
         </div>
         <div className="line" />
-        <div className="Logout" onClick={handleLogout}>
+
+        <Link to={"/favoritePage"}>
+          <div className="touchable" onClick={onClose}>
+            <p> المراكز المفضلة</p>
+            <MdOutlineFavoriteBorder className="LuLogOut" />
+          </div>
+        </Link>
+
+        <div className="touchable" onClick={handleLogout}>
           <p>تسجيل خروج</p>
           <LuLogOut className="LuLogOut" />
         </div>

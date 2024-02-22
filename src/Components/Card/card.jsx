@@ -13,7 +13,7 @@ export const Card = () => {
       method: "GET",
     };
     fetch(
-      "https://my-center-api.onrender.com/api/v1/centers/show?limit=3",
+      "https://my-center-api.onrender.com/api/v1/centers/show?limit=4",
       requestOptions
     )
       .then((response) => response.json())

@@ -34,7 +34,7 @@ export const GridItems = () => {
 
           <div className="grid-description">
             <span>مواد تجميل حديثة و مطورة</span>
-            <p>المركز جميل ويحتوي ع جميع الاجهزة</p>
+            <p>المركز رائع ومجهز بجميع الأجهزة اللازمة </p>
           </div>
         </div>
       </div>
@@ -43,14 +43,16 @@ export const GridItems = () => {
         <ul>
           {products.map((el, i) => (
             <li key={i}>
-              <div className="grid-list-items">
-                <div className="grid-imag-items">
-                  <img className="backgrond" src={el.cover_img} />
+              <Link to={`/page/${el.center_id}`}>
+                <div className="grid-list-items">
+                  <div className="grid-imag-items">
+                    <img className="logo" src={el.logo} />
+                  </div>
+                  <div className="grid-title-items">
+                    <span>{el.center_name}</span>
+                  </div>
                 </div>
-                <div className="grid-title-items">
-                  <span>{el.center_name}</span>
-                </div>
-              </div>
+              </Link>
             </li>
           ))}
         </ul>
