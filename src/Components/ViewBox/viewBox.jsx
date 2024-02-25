@@ -6,6 +6,7 @@ import { LuLogOut } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { BiSupport } from "react-icons/bi";
 
 export const ViewBox = () => {
   const { isOpen, setOpen, inf } = useAppStore();
@@ -71,6 +72,13 @@ export const ViewBox = () => {
           <div className="touchable" onClick={onClose}>
             <p> المراكز المفضلة</p>
             <MdOutlineFavoriteBorder className="LuLogOut" />
+          </div>
+        </Link>
+
+        <Link to={"/support"}>
+          <div className="touchable" onClick={onClose}>
+            <p> الدعم</p>
+            <BiSupport className="LuLogOut" />
           </div>
         </Link>
 

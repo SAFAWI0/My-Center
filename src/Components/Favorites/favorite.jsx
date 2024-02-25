@@ -1,11 +1,11 @@
-import "./favoritePage.css";
+import "./favorite.css";
 import Container from "../Container/container";
 import Header from "../Header/header";
 import { Link } from "react-router-dom";
 import { ButtCancelSave } from "../ButtSave/buttCancelSave";
 import { useEffect, useState } from "react";
 
-export const FavoritePage = () => {
+export const Favorite = () => {
   const [favoriteCenters, setFavoriteCenters] = useState([]);
 
   useEffect(() => {

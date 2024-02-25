@@ -10,7 +10,8 @@ import { UpdateUsers } from "./Components/UpdateUsers/updateUsers";
 import { Centers } from "./Components/Centers/centers";
 import { CenterPage } from "./Components/CenterPage/centerPage";
 import { CategoriesPage } from "./Components/CategoriesPage/categoriesPage";
-import { FavoritePage } from "./Components/Favorites/favoritePage";
+import { Support } from "./Components/Support/support";
+import { Favorite } from "./Components/Favorites/favorite";
 
 const ProtectedRoute = ({ comp }) => {
   const { isLogin, setIsLogin } = useAppStore();
@@ -57,7 +58,11 @@ function App() {
         />
         <Route
           path="/favoritePage"
-          element={<ProtectedRoute comp={<FavoritePage />} />}
+          element={<ProtectedRoute comp={<Favorite />} />}
+        />
+        <Route
+          path="/support"
+          element={<ProtectedRoute comp={<Support />} />}
         />
       </Routes>
     </div>
