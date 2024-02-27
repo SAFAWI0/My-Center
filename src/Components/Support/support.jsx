@@ -24,7 +24,7 @@ export const Support = () => {
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify({
-      messages,
+      message: messages,
       name,
       email,
     });
@@ -35,9 +35,19 @@ export const Support = () => {
       body: raw,
     };
 
-    fetch("http://localhost:3000/api/v1/support/add", requestOptions)
+    fetch(
+      "https://my-center-api.onrender.com/api/v1/support/add",
+      requestOptions
+    )
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        //success
+        messageApi.open({
+          type: "success",
+          content: "سيتم التواصل معك في اقرب وقت",
+        });
+      })
       .catch((error) => console.error(error));
   };
 
