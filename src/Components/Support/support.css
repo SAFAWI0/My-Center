@@ -7,7 +7,6 @@
 .support .message {
   border: 1px solid #ccc;
   padding: 15px;
-  padding-right: 30px;
   border-radius: 5px;
   width: 400px;
 }
@@ -18,7 +17,7 @@
   font-size: 16px;
 }
 .support .form-group input {
-  width: 100%;
+  width: 380px;
   height: 20px;
   border: 1px solid #ccc;
   font-size: 16px;
@@ -27,8 +26,8 @@
   padding: 8px;
 }
 .support .form-group textarea {
-  width: 100%;
-  height: 100px;
+  width: 380px;
+  height: 150px;
   border: 1px solid #ccc;
   font-size: 16px;
   border-radius: 5px;
@@ -56,10 +55,6 @@
   border-radius: 5px;
   text-align: center;
 }
-.support .call .contentCall {
-  display: block;
-}
-
 .support .call .contentCall a {
   color: #007bff;
   text-decoration: none;
@@ -69,7 +64,34 @@
 }
 .support .call .contentCall .number {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.support .call .contentCall .number .icon {
+  font-size: 22px;
+  color: #007bff;
 }
 .support .call .contentCall span {
   font-size: 18px;
+}
+
+@media screen and (max-width: 360px) {
+  .support .message {
+    width: 320px;
+  }
+  .support .form-group input {
+    width: 300px;
+  }
+  .support .form-group textarea {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .support .message {
+    border: none;
+    padding: 0px;
+  }
 }

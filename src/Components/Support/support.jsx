@@ -4,6 +4,7 @@ import Container from "../Container/container";
 import { useState } from "react";
 import { message } from "antd";
 import { Link } from "react-router-dom";
+import { MdAddIcCall } from "react-icons/md";
 
 export const Support = () => {
   const [messages, setMessages] = useState("");
@@ -49,6 +50,7 @@ export const Support = () => {
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input
+                placeholder="الاسم المستخدم"
                 type="text"
                 id="name"
                 name="name"
@@ -60,6 +62,7 @@ export const Support = () => {
             <div className="form-group">
               <label htmlFor="email">Email:</label>
               <input
+                placeholder=" الايميل المسختدم"
                 type="email"
                 id="email"
                 name="email"
@@ -71,6 +74,7 @@ export const Support = () => {
             <div className="form-group">
               <label htmlFor="message">Message:</label>
               <textarea
+                placeholder="ما المشكلة التي تواجها ؟"
                 id="message"
                 name="message"
                 value={messages}
@@ -79,7 +83,7 @@ export const Support = () => {
             </div>
 
             <button type="submit" className="buttSubmit" onClick={handleSubmit}>
-            Send
+              Send
             </button>
           </div>
 
@@ -87,6 +91,7 @@ export const Support = () => {
             <div className="contentCall">
               <span>أتصل على الرقم </span>
               <div className="number">
+                <MdAddIcCall className="icon" />
                 <Link to="tel:07828847962">07828847962</Link>
               </div>
             </div>
